@@ -17,7 +17,7 @@ int main(void)
 	str[3] = 'Y';
 	str[4] = '\0';
 
-	str[3] = 'L';
+	str[0] = 'L';
 
 	printf("%s\n", str);
 	return (0);

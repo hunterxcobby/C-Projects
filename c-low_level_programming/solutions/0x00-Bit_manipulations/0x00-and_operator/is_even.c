@@ -40,13 +40,13 @@ int main(void)
  */
 int is_even(int num)
 {
-	if (num & 1 == 0)
+	if ((num & 1) == 0)
 	{
-		return 1; // Even
+		return 1; /* Even*/
 	}
 	else
 	{
-		return 0; // Odd
+		return 0; /* Odd*/
 	}
 }
 

@@ -4,8 +4,8 @@
 
 int main (void)
 {
-    const char pathname[] = "/bin/ls";
-    char *const argv[] = { "ls", "-l", NULL};
+    const char pathname[] = "/bin/mkdir";
+    char *const argv[] = { "mkdir", "shell", NULL};
     /*char *const envp[] = NULL;*/
 
     execve(pathname, argv, NULL);

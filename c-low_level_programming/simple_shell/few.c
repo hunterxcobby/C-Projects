@@ -26,6 +26,7 @@ int main(void)
 		}
 		else if(child_pid == 0)
 		{
+
 			printf("I am the child %d, PID: %u\n", i + 1, getpid());
 			printf("I am starting my operation\n");
 
@@ -53,7 +54,6 @@ int main(void)
 					printf("Child %d process exited with status: %d\n", i + 1, exit_status);
 				}
 				printf("My child %d is done processing, PID: %u\n", i + 1, getpid());
-				printf("I am now taking over\n");
 
 
 			}

@@ -4,17 +4,17 @@
 
 <p align="center">
   <a href="https://github.com/hunterxcobby/followers"><img alt="GitHub Followers" src="https://img.shields.io/github/followers/hunterxcobby?label=Followers&style=social"></a>
-  <a href="https://github.com/hunterxcobby/Python-Projects/stargazers/"><img alt="GitHub Stars" src="https://img.shields.io/github/stars/hunterxcobby/Python-Projects?style=social"></a>
-  <a href="https://github.com/hunterxcobby/Python-Projects/network/members"><img alt="GitHub Forks" src="https://img.shields.io/github/forks/hunterxcobby/Python-Projects?style=social"></a>
-  <a href="https://github.com/hunterxcobby/Python-Projects/watchers"><img alt="GitHub Watching" src="https://img.shields.io/github/watchers/hunterxcobby/Python-Projects?label=Watching&style=social"></a>
-  <a href="https://github.com/hunterxcobby/Python-Projects/watchers"><img alt="GitHub Contributors" src="https://img.shields.io/github/contributors/hunterxcobby/Python-Projects?logo=github&style=social"></a>
+  <a href="https://github.com/hunterxcobby/C-Projects/stargazers/"><img alt="GitHub Stars" src="https://img.shields.io/github/stars/hunterxcobby/C-Projects?style=social"></a>
+  <a href="https://github.com/hunterxcobby/C-Projects/network/members"><img alt="GitHub Forks" src="https://img.shields.io/github/forks/hunterxcobby/Python-Projects?style=social"></a>
+  <a href="https://github.com/hunterxcobby/C-Projects/watchers"><img alt="GitHub Watching" src="https://img.shields.io/github/watchers/hunterxcobby/Python-Projects?label=Watching&style=social"></a>
+  <a href="https://github.com/hunterxcobby/C-Projects/watchers"><img alt="GitHub Contributors" src="https://img.shields.io/github/contributors/hunterxcobby/C-Projects?logo=github&style=social"></a>
 </p>
 
 <p align="center">
-  <a href="https://github.com/hunterxcobby/Python-Projects"><img alt="GitHub Repo Size" src="https://img.shields.io/github/repo-size/hunterxcobby/Python-Projects?label=Repo%20size&style=flat"></a>
+  <a href="https://github.com/hunterxcobby/C-Projects"><img alt="GitHub Repo Size" src="https://img.shields.io/github/repo-size/hunterxcobby/Python-Projects?label=Repo%20size&style=flat"></a>
 </p>
 
-<h2 align="center">PYTHON-PROJECTS.</h2>
+<h2 align="center">C-PROJECTS.</h2>
 
 This repository contains some basic projects, lessons and notes to guide one get introduced to the Python programming language..
 
@@ -70,19 +70,15 @@ For more detailed information and tutorials, consider referring to resources lik
 
 ## Usage
 
-+ The notes in the lessons are the various notes I made when working on the exercises
-+ The notes have the same names as the exercises so not to confuse you.
 + This repository and all of its contents are for learning purposes.
 + Some of these files contain basic concepts on how to achieve certain results.
 
 ## Contributions
 
-+ This repository and all of its contents are works/solutions to help a new learner of the Python language.
++ This repository and all of its contents are works/solutions that I came up with for the tasks assigned to me as a learner of the C language.
 + Contributions are allowed and will be taken into consideration.
-+ If you have any ideas, please do share with me let us work on it.
-+ With that been said please let me know if I missed something.
++ With that being said please let me know if I missed something.
 + I am up for corrections..
-
 ## Contact
 
 Feel free to reach out to me through any of the following channels:

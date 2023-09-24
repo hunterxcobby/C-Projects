@@ -5,18 +5,18 @@
 <p align="center">
   <a href="https://github.com/hunterxcobby/followers"><img alt="GitHub Followers" src="https://img.shields.io/github/followers/hunterxcobby?label=Followers&style=social"></a>
   <a href="https://github.com/hunterxcobby/C-Projects/stargazers/"><img alt="GitHub Stars" src="https://img.shields.io/github/stars/hunterxcobby/C-Projects?style=social"></a>
-  <a href="https://github.com/hunterxcobby/C-Projects/network/members"><img alt="GitHub Forks" src="https://img.shields.io/github/forks/hunterxcobby/Python-Projects?style=social"></a>
-  <a href="https://github.com/hunterxcobby/C-Projects/watchers"><img alt="GitHub Watching" src="https://img.shields.io/github/watchers/hunterxcobby/Python-Projects?label=Watching&style=social"></a>
+  <a href="https://github.com/hunterxcobby/C-Projects/network/members"><img alt="GitHub Forks" src="https://img.shields.io/github/forks/hunterxcobby/C-Projects?style=social"></a>
+  <a href="https://github.com/hunterxcobby/C-Projects/watchers"><img alt="GitHub Watching" src="https://img.shields.io/github/watchers/hunterxcobby/C-Projects?label=Watching&style=social"></a>
   <a href="https://github.com/hunterxcobby/C-Projects/watchers"><img alt="GitHub Contributors" src="https://img.shields.io/github/contributors/hunterxcobby/C-Projects?logo=github&style=social"></a>
 </p>
 
 <p align="center">
-  <a href="https://github.com/hunterxcobby/C-Projects"><img alt="GitHub Repo Size" src="https://img.shields.io/github/repo-size/hunterxcobby/Python-Projects?label=Repo%20size&style=flat"></a>
+  <a href="https://github.com/hunterxcobby/C-Projects"><img alt="GitHub Repo Size" src="https://img.shields.io/github/repo-size/hunterxcobby/C-Projects?label=Repo%20size&style=flat"></a>
 </p>
 
 <h2 align="center">C-PROJECTS.</h2>
 
-This repository contains some basic projects, lessons and notes to guide one get introduced to the Python programming language..
+This repository contains some basic projects, lessons and notes to guide one get introduced to the C programming language..
 
 ## Table of Contents 
 
@@ -30,8 +30,8 @@ This repository contains some basic projects, lessons and notes to guide one get
 
 ## Repository Description
 
-+ This repository was created to serve as a guide to anyone new to Python. 
-+ It contains directories that help assists anyone ready to learn the Python Language.
++ This repository was created to serve as a guide to anyone new to C. 
++ It contains directories that help assists anyone ready to learn the C Language.
 + Inside the directories are various files that serves as notes, exercises and projects to assist the new learner.
 + Make sure to carefully read all the README.md files as they each contain important key points to consider for a better understanding of the programs..
 + **NOTE**: *This repo and all of its contents exist for learning purposes only.*
@@ -44,7 +44,7 @@ These are the various directories
    -  **[Simple_Shell](https://github.com/hunterxcobby/C-Projects/tree/master/lessons/simple_shell)**
    -  **[Solutions](https://github.com/hunterxcobby/C-Projects/tree/master/lessons/solutions)**
    -  **[Trial_Codes](https://github.com/hunterxcobby/C-Projects/tree/master/lessons/trial_codes)**
-- **[Projects](https://github.com/hunterxcobby/Python-Projects/tree/main/my_projects)**
+- **[Projects](https://github.com/hunterxcobby/C-Projects/tree/main/my_projects)**
 
 ## Installation
 

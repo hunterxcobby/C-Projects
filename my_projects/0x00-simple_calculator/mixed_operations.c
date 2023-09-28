@@ -2,20 +2,20 @@
 
 void mixed_operations(void)
 {
-    int max_operations = 15;
+    int max_operations = 10;
     int operation_count = 0;
     char operation;
     double number;
     int i;
     double result;
-    double numbers[15];
-    char operations[15];
-
-    /* Collect operations and numbers from the user*/
-    printf("Enter operations and numbers (enter 0 as operation to finish):\n");
+    double number;
+    char operations;
 
     while (1) 
     {
+	/* Collect operations and numbers from the user*/
+	printf("Enter operation (+, -, *, /, 0 to stop): ");
+
         scanf(" %c", &operation); /* Note the space before %c to skip whitespace characters */
         
         if (operation == '0') 

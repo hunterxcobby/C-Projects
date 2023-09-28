@@ -17,17 +17,19 @@ void mixed_operations(void)
 
 	/* Collect operations and numbers from the user*/
 	printf("Enter operations and numbers (enter 0 as operation to finish):\n");
-	while (1) {
+	while (1) 
+	{
 		scanf(" %c", &operation); /* Note the space before %c to skip whitespace characters*/
-		if (operation == '0') {
+		if (operation == '0') 
+		{
 			break;
 		}
 
-		scanf("%lf", &number);
-		operations[operation_count] = operation;
-		numbers[operation_count] = number;
-
-		operation_count++;
+		if (operation != '0') 
+		{
+			operations[operation_count] = operation;
+			numbers[operation_count] = number;
+			operation_count++;
 
 		if (operation_count == max_operations) {
 			printf("Maximum number of operations reached.\n");

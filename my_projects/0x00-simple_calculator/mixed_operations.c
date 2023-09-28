@@ -7,6 +7,7 @@ void mixed_operations(void)
 	int operation_count = 0;
         char operation;
         double number;
+	int i;
 
         double result;
 
@@ -35,6 +36,10 @@ void mixed_operations(void)
 	}
 
 	/*Call the calculate function with collected data*/
-	result = mixed(2 * operation_count, numbers[0], operations[0], numbers[1], operations[1], 0);
+	result = numbers[0];
+
+	for (i = 0; i < operation_count; i++) {
+    result = mixed(2, result, operations[i], numbers[i + 1]);
+}
 	printf("Result: %.2f\n", result);
 }

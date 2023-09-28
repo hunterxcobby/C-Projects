@@ -11,10 +11,11 @@ void mixed_operations(void)
     double numbers[15];
     char operations[15];
 
+    /* Collect operations and numbers from the user*/
+    printf("Enter operation (+, -, *, /, 0 to stop): ");
+
     while (1) 
     {
-	/* Collect operations and numbers from the user*/
-	printf("Enter operation (+, -, *, /, 0 to stop): ");
 
         scanf(" %c", &operation); /* Note the space before %c to skip whitespace characters */
         

@@ -119,8 +119,6 @@ double mixed(int count, ...)
 
 		switch (operation) 
 		{
-			
-		if (operation == '0'){
 			continue;
 
 			case '+':
@@ -145,7 +143,6 @@ double mixed(int count, ...)
 				printf("Invalid operation\n");
 				va_end(args);
 				return 0;
-			}
 		}
 
 	}

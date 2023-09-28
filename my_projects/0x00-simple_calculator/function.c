@@ -117,7 +117,12 @@ double mixed(int count, ...)
 		operation = va_arg(args, int);
 		value = va_arg(args, double);
 
-		switch (operation) {
+		switch (operation) 
+		{
+			
+		if (operation == '0'){
+			continue;
+
 			case '+':
 				result += value;
 				break;
@@ -136,12 +141,11 @@ double mixed(int count, ...)
 					return 0;
 				}
 				break;
-			case '0':
-				continue;
 			default:
 				printf("Invalid operation\n");
 				va_end(args);
 				return 0;
+			}
 		}
 
 	}

@@ -12,7 +12,7 @@ void mixed_operations(void)
     char operations[15];
 
     /* Collect operations and numbers from the user*/
-    printf("Enter operation (+, -, *, /, 0 to stop): ");
+    printf("Enter operation (+, -, *, /, 0 to stop): \n");
 
     while (1) 
     {

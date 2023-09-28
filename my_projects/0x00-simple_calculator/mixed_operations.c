@@ -8,8 +8,8 @@ void mixed_operations(void)
     double number;
     int i;
     double result;
-    double number;
-    char operations;
+    double numbers[15];
+    char operations[15];
 
     while (1) 
     {

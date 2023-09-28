@@ -130,6 +130,8 @@ double mixed(int count, ...)
 					return 0;
 				}
 				break;
+			case '0':
+				continue;
 			default:
 				printf("Invalid operation\n");
 				va_end(args);

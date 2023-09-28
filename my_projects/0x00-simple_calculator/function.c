@@ -106,10 +106,11 @@ double mixed(int count, ...)
 
 	result = va_arg(args, double); 
 
-	if (count % 2 == 0) {
+	/*if (count % 2 == 0)
+	 {
 		printf("Error: Invalid number of arguments\n");
 		return 0;
-	}
+	}*/
 
 	for (i = 1; i < count; i += 2)
 	{

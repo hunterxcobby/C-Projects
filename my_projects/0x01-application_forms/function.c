@@ -129,8 +129,8 @@ void genderChoice(char* gender)
     centerAlignText("GENDER");
     centerAlignText("======");
 
-    printf("Please select your gender by entering the corresponding number:\n");
-    printf("1. Male\n2. Female\n3. Specify\n4. Rather not say\n");
+    printf("\nPlease select your gender by entering the corresponding number:\n");
+    printf("\033[1m1. Male\n2. Female\n3. Specify\n4. Rather not say\033[0m\n");
 
     printf("Enter your choice: ");
     scanf("%d", &choice);

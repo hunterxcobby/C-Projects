@@ -4,6 +4,9 @@ int main(void)
 {
   char firstName[50];
   char otherNames[50];
+  int year[4];
+  int month[4];
+  int day[4];
     /*int num;
     char word[MAX_NAME_LENGTH];*/
 
@@ -20,15 +23,9 @@ int main(void)
 
     /* Ask for details*/
     userName(firstName, otherNames);
-    /*printf("First Name: ");
-    fgets(word, sizeof(word), stdin);
-
-    printf("Please enter your Age: ");
-    scanf("%d", &num);*/
     
-    /* Clear the input buffer*/
-    /*while (getchar() != '\n');*/
-
+    /* Birth Date*/
+    void birthDate(int *year, int *month, int *day);
     /*printf("Are these informations provided true?\n NAME: %s\n AGE: %d\n", word, num);
     printf("YES or NO? : ");
     fgets(word, sizeof(word), stdin);*/

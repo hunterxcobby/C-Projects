@@ -50,6 +50,7 @@ int main(void)
     } 
     else 
     {
+      sleep(1.2);
     printf("Well done %s, %s!\n\n", gender, otherNames);
     }
 
@@ -58,7 +59,7 @@ int main(void)
 
     if (choice == 1)
     {
-        printf("Thank you for submitting the form!\n");
+        sleep(1.5);
         break;
     } 
     else if (choice == 2) 

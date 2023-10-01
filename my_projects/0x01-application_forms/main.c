@@ -11,11 +11,13 @@ int main(void)
     mode_msg();
 
     /* Wait for 2 seconds */
-    sleep(2);
+    sleep(2.3);
 
     /* Display Infos for the title */
     title_msg();
 
+    /* Ask for details*/
+    userName();
     /*printf("First Name: ");
     fgets(word, sizeof(word), stdin);
 

@@ -5,6 +5,7 @@
 #include <string.h>
 #include <sys/ioctl.h>
 #include <unistd.h>
+#include <stdlib.h>
 
 #define MAX_NAME_LENGTH 100
 
@@ -13,6 +14,7 @@ void centerAlignText(const char *text);
 
 /* FUnctions Declarations*/
 void mode_msg(void);
-void title_msg(void);
+void title_msg(void); 
+int userName(void);
 
 #endif

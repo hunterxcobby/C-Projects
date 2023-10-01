@@ -6,9 +6,9 @@ void mode_msg(void)
     centerAlignText("--- ONLINE REGISTRATION FORM TEMPLATE ---\n");
     printf("This is for learning purpose and no info will be saved.\n");
     printf("--------------------------------------------------------\n");
-    printf("RELEASE DATE: 01-08-2023\n");
-    printf("RELEASE TIME: 20:09:30 GMT\n");
-    printf("AUTHOR: Cobby Sefah <solomonsefah13@gmail.com>\n");
+    printf("RELEASE DATE: \033[2m01-08-2023\033[0m\n");
+    printf("RELEASE TIME: \033[2m20:09:30 GMT\033[0m\n");
+    printf("AUTHOR: Cobby Sefah \033[2m<@hunterxcobby>\033[0m\n");
     printf("--------------------------------------------------------\n\n\n\n");
 }
 
@@ -26,10 +26,10 @@ void title_msg(void)
 /* The User's Name*/
 void userName(char *firstName, char *otherNames) 
 {
-    centerAlignText("NAME");
-    centerAlignText("====");
+    centerAlignText("NAMES");
+    centerAlignText("=====");
 
-    printf("\nFirst Name: ");
+    printf("\033[1mFirst Name: \033[0m");
     fgets(firstName, sizeof(firstName), stdin);
     firstName[strcspn(firstName, "\n")] = '\0';/* Remove newline*/
 
@@ -40,7 +40,7 @@ void userName(char *firstName, char *otherNames)
         exit(0);
     }
 
-    printf("Other Names: ");
+    printf("\033[1mLast Name: \033[0m");    
     fgets(otherNames, sizeof(otherNames), stdin);
     otherNames[strcspn(otherNames, "\n")] = '\0';  /* Remove newline*/
 

@@ -2,38 +2,41 @@
 
 int main(void)
 {
-    int num;
-    char word[MAX_NAME_LENGTH];
+    /*int num;
+    char word[MAX_NAME_LENGTH];*/
 
-  while (1) {
-    printf("First Name: ");
+  while (1) 
+  {
+    printf("\x1b[1m\x1b[4mXYZ APPLICATION FORM\x1b[0m\n");
+
+    /*printf("First Name: ");
     fgets(word, sizeof(word), stdin);
 
     printf("Please enter your Age: ");
-    scanf("%d", &num);
+    scanf("%d", &num);*/
     
     /* Clear the input buffer*/
-    while (getchar() != '\n');
+    /*while (getchar() != '\n');*/
 
-    printf("Are these informations provided true?\n NAME: %s\n AGE: %d\n", word, num);
+    /*printf("Are these informations provided true?\n NAME: %s\n AGE: %d\n", word, num);
     printf("YES or NO? : ");
-    fgets(word, sizeof(word), stdin);
+    fgets(word, sizeof(word), stdin);*/
     
     /** Remove the trailing newline character from the input*/
-    word[strcspn(word, "\n")] = '\0';
+    /*word[strcspn(word, "\n")] = '\0';*/
 
     /* Check if the user answered "no" or anything other than "yes"*/
-    if (strcmp(word, "yes") && strcmp(word, "YES") && strcmp(word, "Yes")) {
+    /*if (strcmp(word, "yes") && strcmp(word, "YES") && strcmp(word, "Yes")) {
          printf("Please make sure to provide the correct details.\n\n");
    } else {
 	   
-	  break; /*exit the loop if the user answered "yes"*/
-     } 
+	  break;exit the loop if the user answered "yes"
+     }*/ 
    }
 
 	printf("You will receive a confirmation message very soon!\n");
 
 
-    return 0;
+    return (0);
 }
 

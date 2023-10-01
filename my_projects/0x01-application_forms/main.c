@@ -2,6 +2,8 @@
 
 int main(void)
 {
+  char firstName[50];
+  char otherNames[50];
     /*int num;
     char word[MAX_NAME_LENGTH];*/
 
@@ -17,7 +19,7 @@ int main(void)
     title_msg();
 
     /* Ask for details*/
-    userName();
+    userName(firstName, otherNames);
     /*printf("First Name: ");
     fgets(word, sizeof(word), stdin);
 
@@ -44,7 +46,7 @@ int main(void)
       break;
    }
 
-	/*printf("Great %s! You will receive a confirmation message very soon.\n", firstName);*/
+	/*printf("Well done, %s %s!\nYou will receive a confirmation message very soon.\n", otherNames, firstName);*/
 
 
     return (0);

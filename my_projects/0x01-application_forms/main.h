@@ -15,6 +15,6 @@ void centerAlignText(const char *text);
 /* FUnctions Declarations*/
 void mode_msg(void);
 void title_msg(void); 
-int userName(void);
+void userName(char *firstName, char *otherNames);
 
 #endif

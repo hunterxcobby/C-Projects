@@ -24,11 +24,8 @@ void title_msg(void)
 }
 
 /* The User's Name*/
-int userName(void) 
+void userName(char *firstName, char *otherNames) 
 {
-    char firstName[50];
-    char otherNames[50];
-
     centerAlignText("NAME");
     centerAlignText("====");
 
@@ -51,6 +48,4 @@ int userName(void)
         fprintf(stderr, "Name limit exceeded!\nPlease start over.\n");
         exit(0);
     }
-
-    return(0);
 }

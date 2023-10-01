@@ -129,7 +129,7 @@ void genderChoice(char* gender)
     centerAlignText("GENDER");
     centerAlignText("======");
 
-    printf("\n\033[4mPlease select your gender by entering the corresponding number:\033[0m\n\n");
+    printf("\n\033Please select your gender by entering the corresponding number:\n\n");
     printf("\033[1m\n1. Male\n\n2. Female\n\n3. Specify\n\n4. Rather not say\033[0m\n");
 
     printf("\nEnter your choice: ");
@@ -145,7 +145,7 @@ void genderChoice(char* gender)
     } 
     else if (choice == 3) 
     {
-        printf("Please specify your gender: ");
+        printf("\nPlease specify your gender: ");
         scanf("%s", gender);
         strcpy(gender, "Sir/Madam");
     }

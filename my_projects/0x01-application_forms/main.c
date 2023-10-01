@@ -6,7 +6,7 @@ int main(void)
     char word[MAX_NAME_LENGTH];
 
   while (1) {
-    printf("Please enter your Name: ");
+    printf("First Name: ");
     fgets(word, sizeof(word), stdin);
 
     printf("Please enter your Age: ");

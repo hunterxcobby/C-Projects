@@ -39,8 +39,8 @@ while (1)
     /* Ask for COntact*/
   askContact(phone, mail);
 
-
-    /* Saultion*/
+    sleep(2);
+    /* Salution*/
     if (strcmp(gender, "Male") == 0) 
     {
     printf("Well done Sir, %s!\n", otherNames);
@@ -51,7 +51,6 @@ while (1)
     } 
     else 
     {
-      sleep(1.2);
     printf("Well done %s, %s!\n\n", gender, otherNames);
     }
 
@@ -72,6 +71,7 @@ while (1)
     else 
     {
         printf("Invalid choice. Please try again.\n");
+        continue;
     }
 
    break;

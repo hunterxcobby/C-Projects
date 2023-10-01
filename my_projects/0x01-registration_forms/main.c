@@ -37,7 +37,7 @@ while (1)
     askAddress();
 
     /* Ask for COntact*/
-  askContact(phone, mail);
+    askContact(phone, mail);
 
     sleep(2);
     /* Salution*/

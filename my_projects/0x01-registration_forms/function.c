@@ -157,6 +157,7 @@ void genderChoice(char* gender)
     else 
     {
         printf("Invalid choice!\n");
+        continue;
     }
 }
 

@@ -196,4 +196,5 @@ void askContact(char *phone, char *mail)
     printf("\n\033[1mEmail Address: \033[0m");
     scanf("%s", mail);
 
+    printf("\n");
 }

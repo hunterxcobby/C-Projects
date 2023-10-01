@@ -7,7 +7,8 @@ int main(void)
 
   while (1) 
   {
-    printf("\x1b[1m\x1b[4mXYZ APPLICATION FORM\x1b[0m\n");
+    /* Display Title*/
+    title_msg();
 
     /*printf("First Name: ");
     fgets(word, sizeof(word), stdin);
@@ -32,9 +33,10 @@ int main(void)
 	   
 	  break;exit the loop if the user answered "yes"
      }*/ 
+      break;
    }
 
-	printf("You will receive a confirmation message very soon!\n");
+	printf("Great ! You will receive a confirmation message very soon!\n");
 
 
     return (0);

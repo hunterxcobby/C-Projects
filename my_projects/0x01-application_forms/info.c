@@ -20,7 +20,6 @@ void title_msg(void)
 
 
     printf("\nPlease fill out the form for registration.\n");
-    printf("Kindly make sure to provide only your valid details.\n\n");
 }
 
 /* The User's Name*/

@@ -36,7 +36,7 @@ int main(void)
       break;
    }
 
-	printf("Great ! You will receive a confirmation message very soon!\n");
+	printf("Great ! You will receive a confirmation message very soon.\n");
 
 
     return (0);

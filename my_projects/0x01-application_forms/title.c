@@ -2,7 +2,10 @@
 
 void title_msg(void)
 {
-    printf("\x1b[1mABC REGISTRATION FORMS\x1b[0m\n");
+    centerAlignText("ABC REGISTRATION FORMS");
+    centerAlignText("======================");
 
-    printf("Please fill out the form for registration\n");
+
+    printf("\nPlease fill out the form for registration.\n");
+    printf("Kindly make sure to approvide only valid details\n")
 }

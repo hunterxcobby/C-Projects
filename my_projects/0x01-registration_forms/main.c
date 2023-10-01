@@ -58,8 +58,8 @@ int main(void)
   /* Contact*/
   printf("Your forms have been submitted.\n");
   printf("We will keep you updated via.\n");
-  printf("\n\033[1mSMS :%s \033[0m", phone);
-  printf("\n\033[1mEmail :%s \033[0m", mail);
+  printf("\033[1mSMS :\033[0m%s", phone);
+  printf("\n\033[1mEmail :\033[0m%s\n", mail);
 
     return (0);
 }

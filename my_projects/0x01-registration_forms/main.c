@@ -7,7 +7,6 @@ int main(void)
   char year[5];
   char month[3];
   char day[3];
-  /*int sirOrMadam;*/
   char gender[20];
 
   while (1) 

@@ -165,10 +165,9 @@ void genderChoice(char* gender)
 void askAddress(void)
 {
     
-    char *country;
-    char *city;
-    char *street_name;
-    // char *country;
+    char country[100];
+    char city[50];
+    char street_name[50];
 
     centerAlignText("ADDRESS");
     centerAlignText("=======");

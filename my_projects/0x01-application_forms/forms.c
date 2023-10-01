@@ -1,7 +1,4 @@
-#include <stdio.h>
-#include <string.h>
-
-#define MAX_NAME_LENGTH 100
+#include "main.h"
 
 int main(void)
 {
@@ -15,22 +12,22 @@ int main(void)
     printf("Please enter your Age: ");
     scanf("%d", &num);
     
-    /** Clear the input buffer*/
+    /* Clear the input buffer*/
     while (getchar() != '\n');
 
     printf("Are these informations provided true?\n NAME: %s\n AGE: %d\n", word, num);
     printf("YES or NO? : ");
     fgets(word, sizeof(word), stdin);
     
-    // Remove the trailing newline character from the input
+    /** Remove the trailing newline character from the input*/
     word[strcspn(word, "\n")] = '\0';
 
-    // Check if the user answered "no" or anything other than "yes"
+    /* Check if the user answered "no" or anything other than "yes"*/
     if (strcmp(word, "yes") && strcmp(word, "YES") && strcmp(word, "Yes")) {
          printf("Please make sure to provide the correct details.\n\n");
    } else {
 	   
-	  break; //exit the loop if the user answered "yes"
+	  break; /*exit the loop if the user answered "yes"*/
      } 
    }
 

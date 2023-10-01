@@ -7,8 +7,13 @@ int main(void)
 
   while (1) 
   {
-    /* Display Infos*/
+    /* Display Infos for the mode */
     mode_msg();
+
+    /* Wait for 2 seconds */
+    sleep(2);
+
+    /* Display Infos for the title */
     title_msg();
 
     /*printf("First Name: ");

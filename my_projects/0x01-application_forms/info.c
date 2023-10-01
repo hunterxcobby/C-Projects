@@ -3,8 +3,8 @@
 /* Display Model Infos*/
 void mode_msg(void)
 {
-    printf("\n--- ONLINE REGISTRATION FORM TEMPLATE ---\n");
-    printf("This is for learning purpose and no info will be stored.\n");
+    printf("\n--- ONLINE REGISTRATION FORM TEMPLATE ---\n\n");
+    printf("This is for learning purpose and no info will be saved.\n");
     printf("--------------------------------------------------------\n");
     printf("RELEASE DATE: 01-08-2023\n");
     printf("RELEASE TIME: 20:09:30 GMT\n");
@@ -20,5 +20,5 @@ void title_msg(void)
 
 
     printf("\nPlease fill out the form for registration.\n");
-    printf("Kindly make sure to approvide only valid details.\n");
+    printf("Kindly make sure to provide only your valid details.\n");
 }

@@ -33,12 +33,16 @@ int main(void)
     /* Saultion*/
     if (strcmp(gender, "Male") == 0) 
     {
-    printf("I am glad you are a Gentleman, %s!\n", otherNames);
-} else if (strcmp(gender, "Female") == 0) {
-    printf("I am glad you are a Lady, %s!\n", otherNames);
-} else {
-    printf("I am glad you are %s, %s!\n", gender, otherNames);
-}
+    printf("Well done Sir, %s!\n", otherNames);
+    } 
+    else if (strcmp(gender, "Female") == 0) 
+    {
+    printf("Well done Miss, %s!\n", otherNames);
+    } 
+    else 
+    {
+    printf("Well done %s, %s!\n", gender, otherNames);
+    } 
 
     return (0);
 }

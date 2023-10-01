@@ -61,7 +61,7 @@ void birthDate(char *year, char *month, char *day)
                 fprintf(stderr, "\033[A\033[K");  /* Clear previous error message*/
             }
             showError = 1;
-            fprintf(stderr, "Invalid month format!\n");
+            fprintf(stderr, "Invalid month format!\n\n");
             continue; 
         }
 
@@ -84,7 +84,7 @@ void birthDate(char *year, char *month, char *day)
                 fprintf(stderr, "\033[A\033[K");  /*Clear previous error message*/
             }
             showError = 1;
-            fprintf(stderr, "Invalid day format!\nPlease try again.\n");
+            fprintf(stderr, "Invalid day format!\nPlease try again.\n\n");
             continue;
         }
 
@@ -107,7 +107,7 @@ void birthDate(char *year, char *month, char *day)
                 fprintf(stderr, "\033[A\033[K");  /*Clear previous error message*/
             }
             showError = 1;
-            fprintf(stderr, "Invalid year format!\nPlease try again.\n");
+            fprintf(stderr, "Invalid year format!\n\n");
             continue;
         }
 

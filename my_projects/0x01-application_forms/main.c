@@ -4,9 +4,9 @@ int main(void)
 {
   char firstName[50];
   char otherNames[50];
-  int year[4];
-  int month[4];
-  int day[4];
+  int year[5];
+  int month[5];
+  int day[5];
     /*int num;
     char word[MAX_NAME_LENGTH];*/
 
@@ -25,7 +25,8 @@ int main(void)
     userName(firstName, otherNames);
     
     /* Birth Date*/
-    void birthDate(int *year, int *month, int *day);
+    void birthDate(year, month, day);
+    printf("Birth Date: \n");
     /*printf("Are these informations provided true?\n NAME: %s\n AGE: %d\n", word, num);
     printf("YES or NO? : ");
     fgets(word, sizeof(word), stdin);*/

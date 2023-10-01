@@ -45,7 +45,7 @@ void birthDate(int *year, int *month, int *day)
 
     printf("\033[1mMonth (MM): \033[0m");
     fgets(month, sizeof(month), stdin);
-    monthInput[strcspn(month, "\n")] = '\0'; /* Remove newline*/
+    month[strcspn(month, "\n")] = '\0'; /* Remove newline*/
 
     if (strlen(month) >= 2) {
         fprintf(stderr, "Invalid format!\nPlease try again.\n");
@@ -55,7 +55,7 @@ void birthDate(int *year, int *month, int *day)
     /* Ask for Day*/
     printf("\033[1mYear (YYYY): \033[0m");
     fgets(day, sizeof(year), stdin);
-    yearInput[strcspn(day, "\n")] = '\0';  /* Remove newline*/
+    day[strcspn(day, "\n")] = '\0';  /* Remove newline*/
 
     if (strlen(day) > 2) {
         fprintf(stderr, "Invalid input!\nPlease try again.\n");
@@ -72,8 +72,4 @@ void birthDate(int *year, int *month, int *day)
         return (-1);
     }
 
-    /* Convert strings to integers*/
-    *year = atoi(year);
-    *month = atoi(month);
-    *day = atoi(day);
 }

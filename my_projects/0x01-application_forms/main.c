@@ -7,7 +7,8 @@ int main(void)
 
   while (1) 
   {
-    /* Display Title*/
+    /* Display Infos*/
+    mode_msg();
     title_msg();
 
     /*printf("First Name: ");

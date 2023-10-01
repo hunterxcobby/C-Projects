@@ -1,5 +1,6 @@
 #include "main.h"
 
+/* CENTER ALIGN*/
 void centerAlignText(const char *text) 
 {
     int padding;

@@ -12,6 +12,7 @@
 void centerAlignText(const char *text);
 
 /* FUnctions Declarations*/
+void mode_msg(void);
 void title_msg(void);
 
 #endif

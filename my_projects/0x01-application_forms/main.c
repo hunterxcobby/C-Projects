@@ -44,7 +44,7 @@ int main(void)
       break;
    }
 
-	/*printf("Great ! You will receive a confirmation message very soon.\n");*/
+	/*printf("Great %s! You will receive a confirmation message very soon.\n", firstName);*/
 
 
     return (0);

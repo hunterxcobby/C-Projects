@@ -30,7 +30,7 @@ int userName(void)
     char otherNames[50];
 
     centerAlignText("NAME");
-    centerAlignText("=====");
+    centerAlignText("====");
 
     printf("\nFirst Name: ");
     fgets(firstName, sizeof(firstName), stdin);

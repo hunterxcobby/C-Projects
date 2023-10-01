@@ -10,6 +10,7 @@ int main(void)
   char gender[20];
   char phone[15];
   char mail[20];
+  int choice;
 
   while (1) 
   {
@@ -49,10 +50,28 @@ int main(void)
     } 
     else 
     {
-    printf("Well done %s, %s!\n", gender, otherNames);
+    printf("Well done %s, %s!\n\n", gender, otherNames);
     }
 
-    break;
+    /* SUBMISSION*/
+    choice = submitOrCorrect();
+
+    if (choice == 1)
+    {
+        printf("Thank you for submitting the form!\n");
+        break;
+    } 
+    else if (choice == 2) 
+    {
+        printf("Please make the necessary corrections.\n");
+        continue;
+    } 
+    else 
+    {
+        printf("Invalid choice. Please try again.\n");
+    }
+
+   break;
   }
 
   /* Contact*/

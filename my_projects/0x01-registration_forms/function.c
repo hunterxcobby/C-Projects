@@ -198,3 +198,20 @@ void askContact(char *phone, char *mail)
 
     printf("\n");
 }
+
+/* Ask to submit*/
+int submitOrCorrect(void) 
+{
+    int choice;
+
+    centerAlignText("SUBMIT");
+    centerAlignText("======");
+
+    printf("\nWould you like to submit your forms?:\n");
+    printf("Please select an option:\n");
+    printf("1. Submit\n");
+    printf("2. Make Corrections\n");
+    scanf("%d", &choice);
+
+    return choice;
+}

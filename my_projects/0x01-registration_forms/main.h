@@ -18,5 +18,6 @@ void birthDate(char *year, char *month, char *day);
 void genderChoice(char* gender);
 void askAddress(void);
 void askContact(char *phone, char *mail);
+int submitOrCorrect(void); 
 
 #endif

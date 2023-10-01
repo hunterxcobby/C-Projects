@@ -38,38 +38,52 @@ void userName(char *firstName, char *otherNames)
 }
 
 /* Birth Date*/
-void birthDate(int *year, int *month, int *day) 
+void birthDate(char *year, char *month, char *day) 
 {
     centerAlignText("BIRTH DATE");
     centerAlignText("========");
 
-    printf("\033[1mMonth (MM): \033[0m");
-    fgets(month, sizeof(month), stdin);
-    month[strcspn(month, "\n")] = '\0'; /* Remove newline*/
+        while(1) {
+        /* Ask for Month*/
+        printf("\033[1mMonth (MM): \033[0m");
+        scanf("%2s", month);
 
-    if (strlen(month) >= 2) {
-        fprintf(stderr, "Invalid format!\nPlease try again.\n");
-        return (-1);  // Indicate an error
+        if (strlen(month) != 2 || atoi(month) < 1 || atoi(month) > 12) {
+            fprintf(stderr, "Invalid month format!\nPlease try again.\n");
+            continue; 
+        }
+
+        *month = atoi(month);
+        break;
     }
 
-    /* Ask for Day*/
-    printf("\033[1mYear (YYYY): \033[0m");
-    fgets(day, sizeof(year), stdin);
-    day[strcspn(day, "\n")] = '\0';  /* Remove newline*/
+    while(1) {
+        /* Ask for Day*/
+        printf("\033[1mDay (DD): \033[0m");
+        scanf("%2s", day);
 
-    if (strlen(day) > 2) {
-        fprintf(stderr, "Invalid input!\nPlease try again.\n");
-        return (-1);
+        if (strlen(day) != 2 || atoi(day) < 1 || atoi(day) > 31)
+        {
+            fprintf(stderr, "Invalid day format!\nPlease try again.\n");
+            continue;
+        }
+
+        *day = atoi(day);
+        break;
     }
 
-    /* Asks for Year*/
-    printf("\033[1mYear (YYYY): \033[0m");
-    fgets(year, sizeof(year), stdin);
-    year[strcspn(year, "\n")] = '\0';  /* Remove newline*/
+    while(1) {
+        /* Ask for Year*/
+        printf("\033[1mYear (YYYY): \033[0m");
+        scanf("%4s", year);
 
-    if (strlen(year) > 4) {
-        fprintf(stderr, "Invalid format!\nPlease try again.\n");
-        return (-1);
+        if (strlen(year) != 4 || atoi(year) < 1900 || atoi(year) > 9999) 
+        {
+            fprintf(stderr, "Invalid year format!\nPlease try again.\n");
+            continue;
+        }
+
+        *year = atoi(year);
+        break;
     }
-
 }

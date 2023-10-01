@@ -7,8 +7,6 @@
 #include <unistd.h>
 #include <stdlib.h>
 
-#define MAX_NAME_LENGTH 100
-
 /* FOR TEXT FORMATTING */
 void centerAlignText(const char *text);
 
@@ -19,5 +17,6 @@ void userName(char *firstName, char *otherNames);
 void birthDate(char *year, char *month, char *day);
 void genderChoice(char* gender);
 void askAddress(void);
+void askContact(char *phone, char *mail);
 
 #endif

@@ -8,6 +8,8 @@ int main(void)
   char month[3];
   char day[3];
   char gender[20];
+  char *phone;
+  char *mail;
 
   while (1) 
   {
@@ -32,6 +34,10 @@ int main(void)
     /*Ask for address*/
     askAddress();
 
+    /* Ask for COntact*/
+  askContact(phone, mail);
+
+
     /* Saultion*/
     if (strcmp(gender, "Male") == 0) 
     {
@@ -48,6 +54,12 @@ int main(void)
 
     break;
   }
+
+  /* Contact*/
+  printf("Your forms have been submitted.\n");
+  printf("We will keep you updated via.\n");
+  printf("SMS :%s", phone);
+  printf("Email :%s", mail);
 
     return (0);
 }

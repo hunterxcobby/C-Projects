@@ -182,3 +182,17 @@ void askAddress(void)
     scanf("%s", street_name);
 
 }
+
+/* Ask for contact*/
+void askContact(char *phone, char *mail)
+{
+    centerAlignText("CONTACT");
+    centerAlignText("=======");
+
+    printf("\n\033[1mTelephone No.: \033[0m");
+    scanf("%s", phone);
+
+    printf("\n\033[1mEmail Address: \033[0m");
+    scanf("%s", mail);
+
+}

@@ -26,7 +26,7 @@ int main(void)
     
     /* Birth Date*/
     birthDate(year, month, day);
-    printf("Date Of Birth: %s-%s-%s\n",month, day, year);
+    printf("Date Of Birth: %s - %s - %s\n",month, day, year);
     /*printf("Are these informations provided true?\n NAME: %s\n AGE: %d\n", word, num);
     printf("YES or NO? : ");
     fgets(word, sizeof(word), stdin);*/

@@ -53,6 +53,7 @@ void birthDate(char *year, char *month, char *day)
         printf("\033[1mMonth (MM): \033[0m");
         scanf("%2s", month);
 
+        /* Consume the newline character*/
         while (getchar() != '\n');
 
         if (strlen(month) != 2 || atoi(month) < 1 || atoi(month) > 12) {
@@ -75,6 +76,9 @@ void birthDate(char *year, char *month, char *day)
         printf("\033[1mDay (DD): \033[0m");
         scanf("%2s", day);
 
+        /*Consume the newline character*/
+        while (getchar() != '\n');
+
         if (strlen(day) != 2 || atoi(day) < 1 || atoi(day) > 31) {
             if (showError) {
                 fprintf(stderr, "\033[A\033[K");  /*Clear previous error message*/
@@ -94,6 +98,9 @@ void birthDate(char *year, char *month, char *day)
         /* Ask for Year*/
         printf("\033[1mYear (YYYY): \033[0m");
         scanf("%4s", year);
+
+        /*Consume the newline character*/
+        while (getchar() != '\n');
 
         if (strlen(year) != 4 || atoi(year) < 1900 || atoi(year) > 9999) {
             if (showError) {

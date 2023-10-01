@@ -40,16 +40,27 @@ void userName(char *firstName, char *otherNames)
 /* Birth Date*/
 void birthDate(char *year, char *month, char *day) 
 {
+    int showError;
+
     centerAlignText("BIRTH DATE");
     centerAlignText("========");
 
-        while(1) {
+    showError = 0;  /*Flag to track whether an error message has been displayed*/
+
+    while(1) 
+    {
         /* Ask for Month*/
         printf("\033[1mMonth (MM): \033[0m");
         scanf("%2s", month);
 
+        while (getchar() != '\n');
+
         if (strlen(month) != 2 || atoi(month) < 1 || atoi(month) > 12) {
-            fprintf(stderr, "Invalid month format!\nPlease try again.\n");
+            if (showError) {
+                fprintf(stderr, "\033[A\033[K");  /* Clear previous error message*/
+            }
+            showError = 1;
+            fprintf(stderr, "Invalid month format!\n");
             continue; 
         }
 
@@ -57,13 +68,18 @@ void birthDate(char *year, char *month, char *day)
         break;
     }
 
+    showError = 0;  /*Reset the flag*/
+
     while(1) {
         /* Ask for Day*/
         printf("\033[1mDay (DD): \033[0m");
         scanf("%2s", day);
 
-        if (strlen(day) != 2 || atoi(day) < 1 || atoi(day) > 31)
-        {
+        if (strlen(day) != 2 || atoi(day) < 1 || atoi(day) > 31) {
+            if (showError) {
+                fprintf(stderr, "\033[A\033[K");  /*Clear previous error message*/
+            }
+            showError = 1;
             fprintf(stderr, "Invalid day format!\nPlease try again.\n");
             continue;
         }
@@ -72,13 +88,18 @@ void birthDate(char *year, char *month, char *day)
         break;
     }
 
+    showError = 0;
+
     while(1) {
         /* Ask for Year*/
         printf("\033[1mYear (YYYY): \033[0m");
         scanf("%4s", year);
 
-        if (strlen(year) != 4 || atoi(year) < 1900 || atoi(year) > 9999) 
-        {
+        if (strlen(year) != 4 || atoi(year) < 1900 || atoi(year) > 9999) {
+            if (showError) {
+                fprintf(stderr, "\033[A\033[K");  /*Clear previous error message*/
+            }
+            showError = 1;
             fprintf(stderr, "Invalid year format!\nPlease try again.\n");
             continue;
         }

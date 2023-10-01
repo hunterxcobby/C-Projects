@@ -7,7 +7,7 @@ int main(void)
   char year[5];
   char month[3];
   char day[3];
-  int sirOrMadam;
+  /*int sirOrMadam;*/
   char gender[20];
 
   while (1) 
@@ -42,7 +42,8 @@ int main(void)
     else 
     {
     printf("Well done %s, %s!\n", gender, otherNames);
-    } 
+    }
+  }
 
     return (0);
 }

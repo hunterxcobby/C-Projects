@@ -12,11 +12,12 @@ int main(void)
   char mail[20];
   int choice;
 
-  while (1) 
-  {
+  
     /* Display Infos for the mode */
     mode_msg();
 
+while (1) 
+  {
     /* Wait for 2 seconds */
     sleep(2.3);
 
@@ -64,6 +65,7 @@ int main(void)
     } 
     else if (choice == 2) 
     {
+        sleep(2.3);
         printf("Please make the necessary corrections.\n");
         continue;
     } 

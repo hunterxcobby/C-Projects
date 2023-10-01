@@ -151,7 +151,7 @@ void genderChoice(char* gender)
     }
     else if (choice == 4) 
     {
-        printf("\nAlright then, keep your secrets ;) .\n\n");
+        printf("\nAlright then, keep your secrets ;) \n\n");
         strcpy(gender, "Sir/Madam");
     } 
     else 

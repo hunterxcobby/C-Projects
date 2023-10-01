@@ -8,8 +8,8 @@ int main(void)
   char month[3];
   char day[3];
   char gender[20];
-  char *phone = NULL;
-  char *mail = NULL;
+  char phone[15];
+  char mail[20];
 
   while (1) 
   {

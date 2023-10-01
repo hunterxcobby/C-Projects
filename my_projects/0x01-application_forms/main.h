@@ -17,6 +17,7 @@ void mode_msg(void);
 void title_msg(void); 
 void userName(char *firstName, char *otherNames);
 void birthDate(char *year, char *month, char *day);
+void genderChoice(char* gender);
 
 
 #endif

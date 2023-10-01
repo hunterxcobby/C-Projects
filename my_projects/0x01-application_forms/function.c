@@ -43,7 +43,7 @@ void birthDate(char *year, char *month, char *day)
     int showError;
 
     centerAlignText("BIRTH DATE");
-    centerAlignText("========");
+    centerAlignText("==========");
 
     showError = 0;  /*Flag to track whether an error message has been displayed*/
 
@@ -73,7 +73,7 @@ void birthDate(char *year, char *month, char *day)
 
     while(1) {
         /* Ask for Day*/
-        printf("\033[1mDay (DD): \033[0m");
+        printf("\n\033[1mDay (DD): \033[0m");
         scanf("%2s", day);
 
         /*Consume the newline character*/
@@ -84,7 +84,7 @@ void birthDate(char *year, char *month, char *day)
                 fprintf(stderr, "\033[A\033[K");  /*Clear previous error message*/
             }
             showError = 1;
-            fprintf(stderr, "Invalid day format!\nPlease try again.\n\n");
+            fprintf(stderr, "Invalid day format!\n\n");
             continue;
         }
 
@@ -96,7 +96,7 @@ void birthDate(char *year, char *month, char *day)
 
     while(1) {
         /* Ask for Year*/
-        printf("\033[1mYear (YYYY): \033[0m");
+        printf("\n\033[1mYear (YYYY): \033[0m");
         scanf("%4s", year);
 
         /*Consume the newline character*/
@@ -111,7 +111,50 @@ void birthDate(char *year, char *month, char *day)
             continue;
         }
 
-        *year = atoi(year);
+    showError = 0;
+
         break;
+    }
+
+    /*printf("\nDate Of Birth: %s %s %s\n",month, day, year);*/
+ 
+}
+
+
+/* Ask user for gender*/
+void genderChoice(char* gender) 
+{
+    int choice;
+    
+    centerAlignText("GENDER");
+    centerAlignText("======");
+
+    printf("Please select your gender by entering the corresponding number:\n");
+    printf("1. Male\n2. Female\n3. Specify\n4. Rather not say\n");
+
+    printf("Enter your choice: ");
+    scanf("%d", &choice);
+
+    if (choice == 1) 
+    {
+        strcpy(gender, "Male");
+    } 
+    else if (choice == 2) 
+    {
+        strcpy(gender, "Female");
+    } 
+    else if (choice == 3) 
+    {
+        printf("Please specify your gender: ");
+        scanf("%s", gender);
+        strcpy(gender, "Sir/Madam");
+    }
+    else if (choice == 4) 
+    {
+        strcpy(gender, "Sir/Madam");
+    } 
+    else 
+    {
+        printf("Invalid choice!\n");
     }
 }

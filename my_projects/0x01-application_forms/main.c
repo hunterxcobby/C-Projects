@@ -7,8 +7,8 @@ int main(void)
   char year[5];
   char month[3];
   char day[3];
-    /*int num;
-    char word[MAX_NAME_LENGTH];*/
+  int sirOrMadam;
+  char gender[20];
 
   while (1) 
   {
@@ -26,26 +26,19 @@ int main(void)
     
     /* Birth Date*/
     birthDate(year, month, day);
-    printf("\nDate Of Birth: %s - %s - %s\n",month, day, year);
-    /*printf("Are these informations provided true?\n NAME: %s\n AGE: %d\n", word, num);
-    printf("YES or NO? : ");
-    fgets(word, sizeof(word), stdin);*/
-    
-    /** Remove the trailing newline character from the input*/
-    /*word[strcspn(word, "\n")] = '\0';*/
 
-    /* Check if the user answered "no" or anything other than "yes"*/
-    /*if (strcmp(word, "yes") && strcmp(word, "YES") && strcmp(word, "Yes")) {
-         printf("Please make sure to provide the correct details.\n\n");
-   } else {
-	   
-	  break;exit the loop if the user answered "yes"
-     }*/ 
-      break;
-   }
+    /* Ask for gender */
+    genderChoice(gender);
 
-	/*printf("Well done, %s %s!\nYou will receive a confirmation message very soon.\n", otherNames, firstName);*/
-
+    /* Saultion*/
+    if (strcmp(gender, "Male") == 0) 
+    {
+    printf("I am glad you are a Gentleman, %s!\n", otherNames);
+} else if (strcmp(gender, "Female") == 0) {
+    printf("I am glad you are a Lady, %s!\n", otherNames);
+} else {
+    printf("I am glad you are %s, %s!\n", gender, otherNames);
+}
 
     return (0);
 }

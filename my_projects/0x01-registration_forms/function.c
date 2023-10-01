@@ -27,7 +27,7 @@ void userName(char *firstName, char *otherNames)
         exit(0);
     }
 
-    printf("\n\033[1mLast Name: \033[0m");    
+    printf("\n\033[1mOther Names: \033[0m");    
     fgets(otherNames, sizeof(otherNames), stdin);
     otherNames[strcspn(otherNames, "\n")] = '\0';  /* Remove newline*/
 
@@ -151,7 +151,7 @@ void genderChoice(char* gender)
     }
     else if (choice == 4) 
     {
-        printf("\nAlright then, keep your secrets ;) .");
+        printf("\nAlright then, keep your secrets ;) .\n");
         strcpy(gender, "Sir/Madam");
     } 
     else 
@@ -178,7 +178,7 @@ void askAddress(void)
     printf("\n\033[1mCity: \033[0m");
     scanf("%s", city);
 
-    printf("\n\033[1mStreet Name: \033[0m");
+    printf("\n\033[1mStreet Address: \033[0m\n");
     scanf("%s", street_name);
 
 }

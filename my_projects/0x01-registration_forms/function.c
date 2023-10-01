@@ -145,7 +145,7 @@ void genderChoice(char* gender)
     } 
     else if (choice == 3) 
     {
-        printf("\nPlease specify your gender: ");
+        printf("\nPlease specify your gender: \n");
         scanf("%s", gender);
         strcpy(gender, "Sir/Madam");
     }

@@ -30,6 +30,9 @@ int main(void)
     /* Ask for gender */
     genderChoice(gender);
 
+    /*Ask for address*/
+    askAddress();
+
     /* Saultion*/
     if (strcmp(gender, "Male") == 0) 
     {

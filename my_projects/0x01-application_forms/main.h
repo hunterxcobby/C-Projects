@@ -16,7 +16,7 @@ void centerAlignText(const char *text);
 void mode_msg(void);
 void title_msg(void); 
 void userName(char *firstName, char *otherNames);
-void birthDate(int *year, int *month, int *day);
+void birthDate(char *year, char *month, char *day);
 
 
 #endif

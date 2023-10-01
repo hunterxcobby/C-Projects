@@ -43,6 +43,8 @@ int main(void)
     {
     printf("Well done %s, %s!\n", gender, otherNames);
     }
+
+    break;
   }
 
     return (0);

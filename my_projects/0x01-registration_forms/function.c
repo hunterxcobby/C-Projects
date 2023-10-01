@@ -151,7 +151,7 @@ void genderChoice(char* gender)
     }
     else if (choice == 4) 
     {
-        printf("\nAlright then, keep your secrets ;) .\n");
+        printf("\nAlright then, keep your secrets ;) .\n\n");
         strcpy(gender, "Sir/Madam");
     } 
     else 
@@ -178,9 +178,10 @@ void askAddress(void)
     printf("\n\033[1mCity: \033[0m");
     scanf("%s", city);
 
-    printf("\n\033[1mStreet Address: \033[0m\n");
+    printf("\n\033[1mStreet Address: \033[0m");
     scanf("%s", street_name);
 
+    printf("\n\n");
 }
 
 /* Ask for contact*/

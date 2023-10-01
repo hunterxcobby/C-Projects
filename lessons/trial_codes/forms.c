@@ -15,7 +15,7 @@ int main(void)
     printf("Please enter your Age: ");
     scanf("%d", &num);
     
-    // Clear the input buffer
+    /** Clear the input buffer*/
     while (getchar() != '\n');
 
     printf("Are these informations provided true?\n NAME: %s\n AGE: %d\n", word, num);

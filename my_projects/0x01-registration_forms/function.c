@@ -27,7 +27,7 @@ void userName(char *firstName, char *otherNames)
         exit(0);
     }
 
-    printf("\n\033[1mOther Names: \033[0m");    
+    printf("\n\033[1mSurname: \033[0m");    
     fgets(otherNames, sizeof(otherNames), stdin);
     otherNames[strcspn(otherNames, "\n")] = '\0';  /* Remove newline*/
 
@@ -35,12 +35,15 @@ void userName(char *firstName, char *otherNames)
         fprintf(stderr, "Name limit exceeded!\nPlease start over.\n");
         exit(0);
     }
+
 }
 
 /* Birth Date*/
 void birthDate(char *year, char *month, char *day) 
 {
     int showError;
+
+    printf("\n");
 
     centerAlignText("BIRTH DATE");
     centerAlignText("==========");
@@ -50,14 +53,16 @@ void birthDate(char *year, char *month, char *day)
     while(1) 
     {
         /* Ask for Month*/
-        printf("\033[1mMonth (MM): \033[0m");
+        printf("\n\033[1mMonth (MM): \033[0m");
         scanf("%2s", month);
 
         /* Consume the newline character*/
         while (getchar() != '\n');
 
-        if (strlen(month) != 2 || atoi(month) < 1 || atoi(month) > 12) {
-            if (showError) {
+        if (strlen(month) != 2 || atoi(month) < 1 || atoi(month) > 12) 
+        {
+            if (showError) 
+            {
                 fprintf(stderr, "\033[A\033[K");  /* Clear previous error message*/
             }
             showError = 1;
@@ -79,8 +84,10 @@ void birthDate(char *year, char *month, char *day)
         /*Consume the newline character*/
         while (getchar() != '\n');
 
-        if (strlen(day) != 2 || atoi(day) < 1 || atoi(day) > 31) {
-            if (showError) {
+        if (strlen(day) != 2 || atoi(day) < 1 || atoi(day) > 31) 
+        {
+            if (showError) 
+            {
                 fprintf(stderr, "\033[A\033[K");  /*Clear previous error message*/
             }
             showError = 1;
@@ -209,8 +216,8 @@ int submitOrCorrect(void)
 
     printf("\nWould you like to submit your forms?:\n");
     printf("Please select an option:\n");
-    printf("1. Submit\n");
-    printf("2. Make Corrections\n");
+    printf("\n1. Submit\n");
+    printf("\n2. Make Corrections\n");
     scanf("%d", &choice);
 
     return choice;

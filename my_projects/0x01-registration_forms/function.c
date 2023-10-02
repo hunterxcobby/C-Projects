@@ -82,7 +82,7 @@ void birthDate(char *year, char *month, char *day)
         scanf("%2s", day);
 
         /*Consume the newline character*/
-        while (getchar() != '\n');
+        while (getchar() != '\n'); 
 
         if (strlen(day) != 2 || atoi(day) < 1 || atoi(day) > 31) 
         {

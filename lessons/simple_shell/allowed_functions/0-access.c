@@ -4,7 +4,7 @@
 
 int main(void)
 {
-    char *file_path = "acces";
+    char *file_path = "/bin/ls";
     int permissions = F_OK; /*Check for read permissions*/
 
 if (access(file_path, permissions) == 0)

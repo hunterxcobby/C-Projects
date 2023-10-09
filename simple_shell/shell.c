@@ -43,6 +43,9 @@ int main(void)
             {
                 /* This is the child process*/
                 char *cmdPath = get_path(token);/* Assuming we have a function called getpath to find the command's path*/
+                char *args[] = {NULL};
+                args[0] = token;
+
                 if (cmdPath == NULL)
                 {
                     perror("Command not found");
@@ -50,10 +53,10 @@ int main(void)
                 }
 
                 /* We execute the command with execve*/
-                execve(cmdPath, &token, __environ);
+                execve(cmdPath, args, __environ);
 
                 /* Check if evecve fails*/
-                if (execve(cmdPath, &token, __environ) == -1)
+                if (execve(cmdPath, args, __environ) == -1)
                 {
                     perror("Failed to execute program");
                     exit(EXIT_FAILURE); /* Indicate the command could not be executed*/

@@ -34,7 +34,7 @@ int main(void)
 			/* If it is not a built in command, we execute it*/
 			pid_t pid = fork();
 
-			if (pid == 1)
+			if (pid == -1) /* Changed from 1 to -1*/
 			{
 				perror("Fork failed");
 				return(-1);

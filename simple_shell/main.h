@@ -8,4 +8,8 @@
 #include <sys/types.h>
 #include <sys/wait.h>
 
+char *get_path(char *command);
+
+extern char **environ;
+
 #endif 

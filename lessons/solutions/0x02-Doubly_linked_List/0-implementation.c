@@ -32,10 +32,12 @@ int main(void)
     third->data = 25;
 
     /* Linking the nodes*/
+    first->prev = NULL; /* Because it does not point to any address at the moment*/
     first->next = second;
     second->prev = first;
     second->next = third;
     third->prev = second;
+    third->next = NULL; /* Because it does not point to any address*/
     
     /* Traversal*/
     current = first; /* We are setting a current to point to the first*/

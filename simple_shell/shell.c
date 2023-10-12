@@ -37,30 +37,42 @@ int main(void)
 			if (pid == -1) /* Changed from 1 to -1*/
 			{
 				perror("Fork failed");
+				free(line);
 				return(-1);
 			}
 			else if (pid == 0)
 			{
 				/* This is the child process*/
-				char *cmdPath = get_path(token);/* Assuming we have a function called getpath to find the command's path*/
-				char *args[] = {NULL};
+				char *cmdPath = get_path(token);
+				char **args = malloc(2 * sizeof(char *));/* Do not forget to free args*/
+				if (args == NULL)
+				{
+					perror("Memory allocation failed");
+					free(line);
+					exit(EXIT_FAILURE);
+				}
+
 				args[0] = token;
+				args[1] = NULL;
+
+				printf("command path is %s", cmdPath);
 
 				if (cmdPath == NULL)
 				{
 					perror("Command not found");
-					exit(1);
+                    free(args); /* Free allocated memory */
+                    free(line); /* Free allocated memory */
+                    exit(EXIT_FAILURE);
 				}
 
 				/* We execute the command with execve*/
-				execve(cmdPath, args, __environ);
+				execve(cmdPath, args, environ);
 
 				/* Check if evecve fails*/
-				if (execve(cmdPath, args, __environ) == -1)
-				{
-					perror("Failed to execute program");
-					exit(EXIT_FAILURE); /* Indicate the command could not be executed*/
-				}
+				perror("Execve failed");
+                free(args); /* Free allocated memory */
+                free(line); /* Free allocated memory */
+                exit(EXIT_FAILURE);
 			}
 			else
 			{
@@ -71,14 +83,14 @@ int main(void)
 
 				if (WIFEXITED(status) && WEXITSTATUS(status) != 0)
 				{
-					printf("Child process %d exited with non-zero status %d\n", pid, WEXITSTATUS(status));
+					printf("\nChild process %d exited with non-zero status %d\n", pid, WEXITSTATUS(status));
 				}
 			}
 
 			token = strtok(NULL, delimiters);
 
 		}
-
+		free(line); /* Free allocated memory */
 		return(0);
 	}
 }

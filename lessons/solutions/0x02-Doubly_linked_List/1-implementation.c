@@ -21,6 +21,7 @@ void create_node(void)
      scanf("%d", &newnode->data);/* You can also write "(*newnode).data"*/
 
      printf("Data:%d\n", newnode->data);
+     /*printf("Address: %p\n", newnode->next);uncomment to see address of next node*/
 
      
 }

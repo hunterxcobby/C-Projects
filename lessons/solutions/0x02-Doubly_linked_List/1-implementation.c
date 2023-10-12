@@ -9,18 +9,24 @@ typedef struct node
 }node;
 
 /* This is the head pointer that points to the first node*/
-node *head; newnode;
+node *head; 
+node *newnode;
 
 /* A function to create new node*/
-void creat_node(void)
+void create_node(void)
 {
     /* ALlocate memory for the new node*/
      newnode = malloc(sizeof(struct node ));/* 20 bytes will be allocated*/
-     printf("Enter the data:%s\n");
-     scanf("%d", & newnode->data);/* You can also write "(*newnode).data"*/
+     printf("Enter the data:\n");
+     scanf("%d", &newnode->data);/* You can also write "(*newnode).data"*/
+
+     printf("Data:%d\n", newnode->data);
+
+     
 }
 
 int main(void)
 {
 
+    create_node();
 }

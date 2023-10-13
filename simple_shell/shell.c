@@ -8,9 +8,9 @@ int main(void)
         int characters_read;
 
         /* Sring tokenization*/
-        char *delimiters = " "; /* Set an empty string as a delimiter*/
+        char *delimiters = " \n"; /* Set an empty string as a delimiter*/
         char *tokens;
-    char *line_argument[1024];
+    	char *line_argument[1024];
         int pid;
         char **args;
 
@@ -35,12 +35,7 @@ int main(void)
         else 
         {
         int idx = 0;
-		
-		/* Remove the newline character if it exists */
-    	if (line[characters_read - 1] == '\n') 
-		{
-        line[characters_read - 1] = '\0';
-    	}
+
 		printf("This is the content of command'%d'\n", characters_read );
                 /*pid_t pid;*/
                 /* Process the input using string tokenization*/
@@ -114,12 +109,12 @@ int main(void)
                                 /* This is the parent process*/
             
                                 int status;
-                                wait(&status);/* We will wait for the child to finish*/
+								waitpid(pid, &status, 0);/* We will wait for the child to finish*/
 
-                                /*if (WIFEXITED(status) && WEXITSTATUS(status) != 0)
+                                if (WIFEXITED(status) && WEXITSTATUS(status) != 0)
                                 {
-                                        printf("\nChild process %d exited with non-zero status %d\n", 1, WEXITSTATUS(status));
-                                }*/
+                                        printf("\nChild process %d exited with non-zero status %d\n", pid, WEXITSTATUS(status));
+                                }
                         }
 
                         idx++;

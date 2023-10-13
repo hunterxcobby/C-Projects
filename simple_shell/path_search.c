@@ -23,7 +23,7 @@ char *get_path(char *command) /* It takes the tokenized string as argument and c
         printf("Checking path: %s\n", full_path);
 
         /* Check if the file exists */
-        if (access(full_path, F_OK) != -1)
+        if (access(full_path, F_OK) == 0 || access(full_path, X_OK) == 0)
         {
             printf("File found\n");
             free(path_copy); /* Free path_copy since it's not used anymore */

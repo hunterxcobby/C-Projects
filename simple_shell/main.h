@@ -15,5 +15,6 @@ extern char **environ;
 /* for builtin*/
 void builtin_cd(char *arg);
 void builtin_exit();
+void err_msg(char *command);
 
 #endif 

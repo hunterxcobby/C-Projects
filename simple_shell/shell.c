@@ -105,7 +105,7 @@ int main(void)
 					execve(cmdPath, line_argument, environ);
 
 					/* Check if evecve fails*/
-					perror("Execve failed");
+					err_msg(line_argument[0]);
 					free(args);
 					free(line); /* Free allocated memory */
 					exit(1);

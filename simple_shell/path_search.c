@@ -8,9 +8,6 @@
 char *get_path(char *command) /* It takes the tokenized string as argument and calls it a command*/
 {
 
-    /* For the error msg*/
-    char *error_msg;
-    char *error_msg2;
     char *path = getenv("PATH");
     char *path_copy = strdup(path); /* Not to modify the original environment variable*/
 
@@ -38,15 +35,8 @@ char *get_path(char *command) /* It takes the tokenized string as argument and c
         dir = strtok(NULL, ":"); /* Proceed to the next directory*/
     }
 
-    /* Display an error message to the screen*/
-    error_msg = "Command '";
-    write(STDERR_FILENO, error_msg, strlen(error_msg));
-    write(STDERR_FILENO, command, strlen(command));
-    error_msg2 = "' not found\n";
-    write(STDERR_FILENO, error_msg2, strlen(error_msg2));
-
-    exit(EXIT_FAILURE);
+    
     free(path_copy);
     /* if no executable is found, it returns NULL*/
-    return NULL;
+    return (command);
 }

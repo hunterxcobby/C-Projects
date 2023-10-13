@@ -30,11 +30,13 @@ int main(void)
         }
         else if (characters_read == 1)
         {
-          continue;
+          continue; /* This for when the user presses enter without any command*/
         }
         else 
         {
         int idx = 0;
+		printf("This is the length of the command, %ld\n", sizeof(characters_read));
+		printf("This is the content of command'%d'\n", characters_read );
                 /*pid_t pid;*/
                 /* Process the input using string tokenization*/
                 tokens = strtok(line, delimiters);

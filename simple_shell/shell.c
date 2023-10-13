@@ -8,7 +8,7 @@ int main(void)
         int characters_read;
 
         /* Sring tokenization*/
-        char *delimiters = " "; /* Set an empty string as a delimiter*/
+        char *delimiters = " \n"; /* Set an empty string as a delimiter*/
         char *tokens;
     char *line_argument[1024];
         int pid;

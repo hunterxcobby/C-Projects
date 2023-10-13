@@ -17,7 +17,7 @@ char *get_path(char *command) /* It takes the tokenized string as argument and c
     {
         char *full_path = malloc(strlen(dir) + strlen(command) + 2);
         sprintf(full_path, "%s/%s", dir, command);
-        printf("Constructed full_path: %s\n", full_path);
+        /*printf("Constructed full_path: %s\n", full_path);*/
 
         /* To see what is in full_path*/
         printf("Checking path: %s\n", full_path);

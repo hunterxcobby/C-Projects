@@ -36,6 +36,7 @@ void builtin_cd(char *arg)/* Remember our function returns void*/
 /* THis is for exiting*/
 void builtin_exit() 
 {
+    /* Remember clear also works*/
     printf("Exiting the shell...\n");
     /* Before it exists, it can sleep*/
     sleep(2);

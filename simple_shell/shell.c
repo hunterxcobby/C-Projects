@@ -51,6 +51,24 @@ int main(void)
 			}
 			line_argument[idx] = NULL;
 
+
+			/**
+			 * Here we can check if the token is a built-in command like (i.e, cd, exit)
+			 * And handle it separately  
+			 */
+			if(strcmp(line_argument[0], "cd") == 0)
+			{
+				/* We call for our function*/
+				builtin_cd(line_argument[1]);
+			}
+			/* If the user enters exit.*/
+			else if(strcmp(line_argument[0], "exit") == 0) 
+			{
+				/* We call our exit function*/
+        		builtin_exit();
+			}
+			else
+			{
 			pid = fork();
 
 			if (pid == -1) /* Changed from 1 to -1*/
@@ -69,11 +87,7 @@ int main(void)
 				if (cmdPath != NULL) 
 				{
 					printf("Executing command: %s\n", cmdPath);
-					/**
-					 * Here we can check if the token is a built-in command like (i.e, cd, exit)
-					 * And handle it separately  
-					 */
-
+					
 					/* If it is not a built in command, we execute it*/
 
 					/* This is the child process*/
@@ -92,7 +106,7 @@ int main(void)
 
 					/* Check if evecve fails*/
 					perror("Execve failed");
-
+					free(args);
 					free(line); /* Free allocated memory */
 					exit(1);
 				}
@@ -115,7 +129,7 @@ int main(void)
 
 
 		}/* loop ends end*/
-
+		}/* This is for builtin*/
 	}
 	free(line); /* Free allocated memory */
 	return(0);

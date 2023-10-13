@@ -12,4 +12,8 @@ char *get_path(char *command);
 
 extern char **environ;
 
+/* for builtin*/
+void builtin_cd(char *arg);
+void builtin_exit();
+
 #endif 

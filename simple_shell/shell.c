@@ -8,7 +8,7 @@ int main(void)
         int characters_read;
 
         /* Sring tokenization*/
-        char *delimiters = " \n"; /* Set an empty string as a delimiter*/
+        char *delimiters = " "; /* Set an empty string as a delimiter*/
         char *tokens;
     char *line_argument[1024];
         int pid;
@@ -35,7 +35,12 @@ int main(void)
         else 
         {
         int idx = 0;
-		printf("This is the length of the command, %ld\n", sizeof(characters_read));
+		
+		/* Remove the newline character if it exists */
+    	if (line[characters_read - 1] == '\n') 
+		{
+        line[characters_read - 1] = '\0';
+    	}
 		printf("This is the content of command'%d'\n", characters_read );
                 /*pid_t pid;*/
                 /* Process the input using string tokenization*/

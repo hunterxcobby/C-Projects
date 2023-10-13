@@ -25,8 +25,20 @@ int main(void)
 
 		if (characters_read == -1)
 		{
-			perror("Error reading input");
-			return(-1);
+			/* To check when the user enters ctrl + D*/
+			if (feof(stdin)) 
+			{
+        		/*User pressed Ctrl+D (EOF)*/
+        		printf("\nExiting shell...\n");
+				sleep(2);
+        		free(line);
+        		exit(0);
+			}
+			else
+			{
+				perror("Error reading input");
+				return(-1);
+			}
 		}
 		else if (characters_read == 1)
 		{

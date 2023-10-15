@@ -32,7 +32,7 @@ typedef struct node
     int count = 1;
 
 /* A function to create a node*/
-void create_node(void)
+void insert_beg(void)
 {
     /* Allocate memory for the newnode*/
     newnode = malloc(sizeof(struct node));
@@ -67,12 +67,12 @@ int main(void)
     int numNodes, i;
     
     /* Ask the user the number of nodes they want to create*/
-    printf("How many nodes do you want to create?:\n");
+    printf("How many nodes do you want to insert at the beginning?:\n");
     scanf("%d", &numNodes);
 
     for (i = 0; i < numNodes; i++) 
     {
-        create_node();/* Let us call for our function here*/
+        insert_beg();/* Let us call for our function here*/
     }
 
     /* We will display the nodes here*/

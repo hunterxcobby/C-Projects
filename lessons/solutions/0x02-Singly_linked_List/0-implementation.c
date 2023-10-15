@@ -46,6 +46,7 @@ void create_node(void)
     {
         /* The pointer of the first node now points to the newnode*/
         head->next = newnode;
+        head = newnode;
     }
 } 
 

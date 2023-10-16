@@ -10,7 +10,7 @@ int main(void)
 	int characters_read;
 
 	/* Sring tokenization*/
-	char *delimiters = " \n"; /* Set an empty string as a delimiter*/
+	char *delimiters = " \n\r\t\a"; /* Set an empty string as a delimiter*/
 	char *tokens;
 	char *line_argument[1024];
 	int pid;
@@ -122,6 +122,12 @@ int main(void)
 
 	}
 	free(line); /* Free allocated memory */
+	printf("Is a TTY: %d\n", isatty(STDIN_FILENO));
+	if (isatty(STDIN_FILENO) == 1)
+	{
+		printf("Inside isatty condition\n");
+		write(1, "\n", 1);
+	}
 	return(0);
 }
 

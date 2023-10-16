@@ -16,6 +16,8 @@ int main(void)
 	int pid;
 	/*char **args;*/
 
+	/*To handle signals */
+	signal(SIGINT, signal_handler);
 
 	while (1)
 	{

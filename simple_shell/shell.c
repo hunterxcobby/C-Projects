@@ -1,5 +1,7 @@
 #include "main.h"
 
+void tatata(void);
+
 int main(void)
 {
 	/* Declare variables*/
@@ -12,7 +14,7 @@ int main(void)
 	char *tokens;
 	char *line_argument[1024];
 	int pid;
-	char **args;
+	/*char **args;*/
 
 
 	while (1)
@@ -25,36 +27,29 @@ int main(void)
 
 		if (characters_read == -1)
 		{
-			/* To check when the user enters ctrl + D*/
-			if (feof(stdin)) 
+			/* When the user presses CTRL + D*/
+			if (feof(stdin))
 			{
-        		/*User pressed Ctrl+D (EOF)*/
-        		printf("\nExiting shell...\n");
-				sleep(2);
-        		free(line);
-        		exit(0);
+				builtin_exit();
 			}
 			else
 			{
-				perror("Error reading input");
+				perror("Error reading input\n");
 				return(-1);
 			}
 		}
 		else if (characters_read == 1)
 		{
-			continue; /* This for when the user presses enter without any command*/
+			continue;
 		}
 		else 
 		{
 			int idx = 0;
 
-			printf("This is the content of command'%d'\n", characters_read );
-			/*pid_t pid;*/
 			/* Process the input using string tokenization*/
 			tokens = strtok(line, delimiters);
-			printf("This is the token=====>>>%s\n", tokens);
 
-			/* We use a null termination tokenization*/
+			/* We use a null terminating tokenization*/
 			while(tokens != NULL)
 			{
 				line_argument[idx] = tokens;
@@ -63,21 +58,20 @@ int main(void)
 			}
 			line_argument[idx] = NULL;
 
-
 			/**
 			 * Here we can check if the token is a built-in command like (i.e, cd, exit)
 			 * And handle it separately  
 			 */
-			if(strcmp(line_argument[0], "cd") == 0)
+
+			if (strcmp(line_argument[0], "cd") == 0)
 			{
-				/* We call for our function*/
+				/* Call for our function*/
 				builtin_cd(line_argument[1]);
 			}
-			/* If the user enters exit.*/
-			else if(strcmp(line_argument[0], "exit") == 0) 
+			else if(strcmp(line_argument[0], "exit")== 0)
 			{
-				/* We call our exit function*/
-        		builtin_exit();
+				/* We want to exit*/
+				builtin_exit();
 			}
 			else
 			{
@@ -93,24 +87,12 @@ int main(void)
 			{
 				/*pid_t pid;*/
 				char *cmdPath = get_path(line_argument[0]);
-				printf("line =====>>>%s\n", line);
-				printf("This is the token now=====>>>%s\n", tokens);
-				printf("command path is %s\n", cmdPath);
 				if (cmdPath != NULL) 
 				{
-					printf("Executing command: %s\n", cmdPath);
-					
+
 					/* If it is not a built in command, we execute it*/
 
 					/* This is the child process*/
-					args = malloc(2 * sizeof(char *));/* Do not forget to free args*/
-					if (args == NULL)
-					{
-						perror("Memory allocation failed");
-						free(line);
-						exit(EXIT_FAILURE);
-					}
-
 
 
 					/* We execute the command with execve*/
@@ -118,7 +100,6 @@ int main(void)
 
 					/* Check if evecve fails*/
 					err_msg(line_argument[0]);
-					free(args);
 					free(line); /* Free allocated memory */
 					exit(1);
 				}
@@ -129,20 +110,19 @@ int main(void)
 				/* This is the parent process*/
 
 				int status;
-				waitpid(pid, &status, 0);/* We will wait for the child to finish*/
+				waitpid(pid, &status, 0);
 
 				if (WIFEXITED(status) && WEXITSTATUS(status) != 0)
 				{
 					printf("\nChild process %d exited with non-zero status %d\n", pid, WEXITSTATUS(status));
 				}
 			}
-
-
-
-
+			}
 		}/* loop ends end*/
-		}/* This is for builtin*/
+
 	}
 	free(line); /* Free allocated memory */
 	return(0);
 }
+
+

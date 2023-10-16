@@ -3,18 +3,19 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 #include <unistd.h>
+#include <string.h>
 #include <sys/types.h>
 #include <sys/wait.h>
+#include <sys/stat.h>
 
 char *get_path(char *command);
-
 extern char **environ;
 
-/* for builtin*/
-void builtin_cd(char *arg);
-void builtin_exit();
+/* For builtin*/
+void builtin_cd(char *args);
+void builtin_exit(void);
 void err_msg(char *command);
 
 #endif 
+

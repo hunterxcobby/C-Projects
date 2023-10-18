@@ -17,5 +17,7 @@ void builtin_cd(char *args);
 void builtin_exit(void);
 void err_msg(char *command);
 
+void signal_handler(int signal);
+
 #endif 
 

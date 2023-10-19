@@ -16,6 +16,7 @@ int main(int argc, char *argv[])
 	ssize_t read_data;
 	char *token;
 	char *delimiter = "\n\t\r\a ;:";
+    int push_flag = 0;
 
 	/* user does not give any file or more than one argument to your program*/
 	if (argc != 2 || !argv[1])
@@ -53,6 +54,25 @@ int main(int argc, char *argv[])
 
 	/* We tokenize the data*/
 	token = strtok(line, delimiter);
+    while (token != NULL)
+    {
+        if (push_flag == 1)
+        {
+            /* We call for our function here*/
+            push_flag = 0;
+            token = strtok(NULL, delimiter);
+            line_number++;
+            continue;
+
+        }
+        else if (strcmp(token, "push") == 0)
+        {
+            push_flag = 1;
+            token = strtok(NULL, delimiter);
+            continue;
+        }
+
+    }
 	line_number++;
 	token = strtok(NULL, delimiter);
 

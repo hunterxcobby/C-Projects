@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
 	int line_number = 1;/* LIne number will always start at one*/
 	char *line;/* Initialize a buffer to read lines from the file */
 	ssize_t read_data;
-	char *token;
+	char *opcode;
 	char *delimiter = "\n\t\r\a ;:";
     int push_flag = 0;
 
@@ -53,28 +53,35 @@ int main(int argc, char *argv[])
 	}
 
 	/* We tokenize the data*/
-	token = strtok(line, delimiter);
-    while (token != NULL)
+	opcode = strtok(line, delimiter);
+    while (opcode != NULL)
     {
         if (push_flag == 1)
         {
-            /* We call for our function here*/
+            /* Our push function goes here */
             push_flag = 0;
-            token = strtok(NULL, delimiter);
+            opcode = strtok(NULL, delimiter);
             line_number++;
             continue;
 
         }
-        else if (strcmp(token, "push") == 0)
+        else if (strcmp(opcode, "push") == 0)
         {
             push_flag = 1;
-            token = strtok(NULL, delimiter);
+            opcode = strtok(NULL, delimiter);
             continue;
+        }
+        else
+        {   
+            /* Other statement goes here*/
+            /* We handle when it encounters an error*/
+            fprintf(stderr, "L%d: unknown instruction %s\n", line_number, opcode);
+			exit(EXIT_FAILURE);
         }
 
     }
 	line_number++;
-	token = strtok(NULL, delimiter);
+	opcode = strtok(NULL, delimiter);
 
 
 	free(line);

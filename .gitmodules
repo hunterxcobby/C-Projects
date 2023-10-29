@@ -1,0 +1,3 @@
+[submodule "simple_calculator"]
+	path = simple_calculator
+	url = https://github.com/hunterxcobby/simple_calculator.git

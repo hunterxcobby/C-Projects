@@ -119,8 +119,6 @@ double mixed(int count, ...)
 
 		switch (operation) 
 		{
-			continue;
-
 			case '+':
 				result += value;
 				break;

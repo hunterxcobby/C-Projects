@@ -17,6 +17,8 @@ ht_item* create_item(char* key, char* value)
 
 hashtable* create_table(int size)
 {
+    int i;
+    
     /* Create a new hash table*/
     hashtable *table = malloc(sizeof(hashtable));
     table->size = size;
@@ -24,7 +26,7 @@ hashtable* create_table(int size)
     table->items = calloc(table->size, sizeof(ht_item*));
 
     /* TO set all the elements of the hashtable to null*/
-    for (int i = 0; i < table->size; i++)
+    for (i = 0; i < table->size; i++)
         table->items[i] = NULL;
 
     return table;

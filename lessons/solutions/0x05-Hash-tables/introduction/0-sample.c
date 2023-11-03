@@ -1,12 +1,13 @@
 #include <stdio.h>
 
-#define CAPACITY 50000 // Size of the HashTable.
+#define CAPACITY 50000 /* Size of the HashTable.*/
 
 unsigned long hash_function(char* str)
 {
+    int j;
     unsigned long i = 0;
 
-    for (int j = 0; str[j]; j++)
+    for (j = 0; str[j]; j++)
     {
         i = i + str[j];
         printf("%ld => ", i);

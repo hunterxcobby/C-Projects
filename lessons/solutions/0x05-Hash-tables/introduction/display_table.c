@@ -2,7 +2,7 @@
 
 /* This function prints the contents of a HashTable. */
 
-void print_table(hashtable* table)
+void print_table(hashtable *table)
 {
     int i;
 

@@ -12,7 +12,7 @@
 
 /* This function frees an item in the HashTable. */
 
-void free_item(ht_item* item)
+void free_item(ht_item *item)
 {
     /* Frees the memory occupied by an item. */
     free(item->key); /* Free the memory for the key. */
@@ -29,7 +29,7 @@ void free_item(ht_item* item)
 
 /* This function frees a HashTable. */
 
-void free_table(hashtable* table)
+void free_table(hashtable *table)
 {
     int i;
 

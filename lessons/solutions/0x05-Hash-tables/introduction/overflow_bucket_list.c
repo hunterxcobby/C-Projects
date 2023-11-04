@@ -10,6 +10,9 @@ LinkedList* allocate_list()
 /* Function to insert a new item into the linked list. */
 LinkedList* linkedlist_insert(LinkedList* list, ht_item* item)
 {
+    LinkedList *temp;
+    LinkedList *node;
+
     if (!list)
     {
         /* If the list is empty, create a new list and make it the head. */
@@ -29,7 +32,7 @@ LinkedList* linkedlist_insert(LinkedList* list, ht_item* item)
         return list;
     }
 
-    LinkedList* temp = list;
+    temp = list;
 
     while (temp->next->next)
     {
@@ -37,7 +40,7 @@ LinkedList* linkedlist_insert(LinkedList* list, ht_item* item)
     }
 
     /* Find the last item in the list and add a new item after it. */
-    LinkedList* node = allocate_list();
+    node = allocate_list();
     node->item = item;
     node->next = NULL;
     temp->next = node;
@@ -47,17 +50,21 @@ LinkedList* linkedlist_insert(LinkedList* list, ht_item* item)
 /* Function to remove and return the first item from the linked list. */
 ht_item* linkedlist_remove(LinkedList* list)
 {
+    LinkedList *node;
+    LinkedList *temp;
+    ht_item *it;
+
     if (!list)
         return NULL;
 
     if (!list->next)
         return NULL;
 
-    LinkedList* node = list->next;
-    LinkedList* temp = list;
+    node = list->next;
+    temp = list;
     temp->next = NULL;
     list = node;
-    ht_item* it = NULL;
+    it = NULL;
     memcpy(temp->item, it, sizeof(ht_item)); /* Copy a null item to the removed node. */
     free(temp->item->key); /* Free memory for the key of the removed item. */
     free(temp->item->value); /* Free memory for the value of the removed item. */

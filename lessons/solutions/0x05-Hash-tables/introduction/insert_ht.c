@@ -4,6 +4,7 @@
 
 void ht_insert(hashtable *table, char *key, char *value)
 {
+    ht_item *current_item;
     int index; /* The index where the item will be inserted. */
     ht_item *item; /* The item to be inserted. */
 
@@ -13,7 +14,7 @@ void ht_insert(hashtable *table, char *key, char *value)
     /* Compute the index using the hash function */
     index = hash_function(key); /* Find the slot in the table where the item belongs. */
 
-    ht_item* current_item = table->items[index]; /* Get the item currently at that index. */
+    current_item = table->items[index]; /* Get the item currently at that index. */
 
     /* When inserting the key for the first time, the item must be NULL */
     if (current_item == NULL)

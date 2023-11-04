@@ -81,3 +81,15 @@ void free_linkedlist(LinkedList* list)
         free(temp); /* Free memory for each node. */
     }
 }
+
+
+/**
+ * Imagine you have a train (linked list) where each carriage (node) can hold an item. 
+ * The item is like a box with a key and a value inside.
+ * 
+ * allocate_list creates a new carriage for the train.
+ * @ : linkedlist_insert adds a new carriage to the end of the train.
+ * @ : linkedlist_remove takes off the first carriage from the train and gives you the item inside.
+ * @ : free_linkedlist is like dismantling the entire train, taking out each item, and throwing away the empty carriages.
+This linked list helps manage items in the HashTable, especially when there are more items than slots available.
+*/

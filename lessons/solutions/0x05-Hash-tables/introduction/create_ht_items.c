@@ -46,6 +46,8 @@ hashtable* create_table(int size)
     for (i = 0; i < table->size; i++)
         table->items[i] = NULL; /* Initialize each slot to be empty. */
 
+    table->overflow_buckets = create_overflow_buckets(table);
+
     return table; /* Return the newly created hash table. */
 }
 

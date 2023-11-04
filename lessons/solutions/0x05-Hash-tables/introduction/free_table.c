@@ -42,6 +42,8 @@ void free_table(hashtable* table)
             free_item(item); /* If there's an item, free it. */
     }
 
+    /* Free the overflow bucket lists and its items.*/
+    free_overflow_buckets(table);
     free(table->items); /* Free the memory for the array of items. */
     free(table); /* Free the memory for the table itself. */
 }

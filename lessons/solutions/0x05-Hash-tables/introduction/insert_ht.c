@@ -45,7 +45,7 @@ void ht_insert(hashtable *table, char *key, char *value)
         else 
         {
             /* Scenario 2: Handle the collision. */
-            handle_collision(table, item); /* Handle the case where there's a collision. */
+            handle_collision(table, index, item); /* Handle the case where there's a collision. */
             return;
         }
     }

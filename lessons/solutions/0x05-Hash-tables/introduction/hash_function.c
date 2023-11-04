@@ -2,7 +2,6 @@
 
 /* This function calculates the hash value for a given string. */
 
-#define CAPACITY 50000 /* Size of the HashTable.*/
 
 unsigned long hash_function(char* str)
 {

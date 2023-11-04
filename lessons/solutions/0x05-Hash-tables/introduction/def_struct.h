@@ -5,6 +5,8 @@
 #include <stdlib.h>
 #include <string.h>
 
+#define CAPACITY 50000 /* Size of the HashTable.*/
+
 /* Defines the hashtable items */
 typedef struct ht_item
 {

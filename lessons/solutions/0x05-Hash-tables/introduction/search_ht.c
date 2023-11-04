@@ -18,6 +18,9 @@ char* ht_search(hashtable* table, char* key)
        in the HashTable. */
     ht_item* item = table->items[index];
 
+    /* update the search method to use overflow buckets:*/
+    LinkedList* head = table->overflow_buckets[index];
+
     /* If there's something there (it's not empty), we'll check if
        the key matches the one we're looking for. */
     if (item != NULL)
@@ -26,6 +29,13 @@ char* ht_search(hashtable* table, char* key)
            looking for, and we can return the associated value. */
         if (strcmp(item->key, key) == 0)
             return item->value;
+
+        /* update the search method to use overflow buckets:*/       
+        if (head == NULL)
+            return NULL;
+
+        item = head->item;
+        head = head->next;
     }
 
     /* If we didn't find what we were looking for, we return NULL. */

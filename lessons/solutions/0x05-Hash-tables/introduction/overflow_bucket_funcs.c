@@ -17,10 +17,11 @@
 
 LinkedList** create_overflow_buckets(hashtable* table)
 {
+    int i;
     /* Create the overflow buckets; an array of LinkedLists.*/
     LinkedList** buckets = (LinkedList**) calloc(table->size, sizeof(LinkedList*));
 
-    for (int i = 0; i < table->size; i++)
+    for (i = 0; i < table->size; i++)
         buckets[i] = NULL; /* Initialize each slot to be empty. */
 
     return buckets; /* Return the array of overflow buckets. */
@@ -36,10 +37,11 @@ LinkedList** create_overflow_buckets(hashtable* table)
 
 void free_overflow_buckets(hashtable* table)
 {
+    int i;
     /* Free all the overflow bucket lists.*/
     LinkedList** buckets = table->overflow_buckets; /* Get the array of overflow buckets. */
 
-    for (int i = 0; i < table->size; i++)
+    for (i = 0; i < table->size; i++)
         free_linkedlist(buckets[i]); /* Free each linked list in the overflow buckets. */
 
     free(buckets); /* Free the memory for the array of overflow buckets. */

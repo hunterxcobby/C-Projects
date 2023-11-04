@@ -19,6 +19,7 @@ typedef struct hashtable
     /* COntains an array of pointers to the items*/
     ht_item **items;
 
+    LinkedList **overflow_buckets;
     int size; /* TO return the size of the hash table*/
     int count; /* To return the number of items in the hash table*/
 

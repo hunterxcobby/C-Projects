@@ -6,9 +6,10 @@
 
 unsigned long hash_function(char* str)
 {
+    int j;
     unsigned long i = 0; /* Initialize a variable to keep track of the hash value. */
 
-    for (int j = 0; str[j]; j++)
+    for (j = 0; str[j]; j++)
         i += str[j]; /* Add the ASCII values of each character in the string. */
 
     return i % CAPACITY; /* Return the remainder of dividing the sum by the CAPACITY. */

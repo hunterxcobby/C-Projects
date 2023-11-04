@@ -2,11 +2,14 @@
 
 /* This function deletes an item from the HashTable. */
 
-void ht_delete(hashtable* table, char* key)
+void ht_delete(hashtable *table, char *key)
 {
+    LinkedList *node;
+    LinkedList *curr; 
+    LinkedList *prev;
     /* Deletes an item from the table.*/
     int index = hash_function(key); /* Find the index where the item is located. */
-    ht_item* item = table->items[index]; /* Get the item at that index. */
+    ht_item *item = table->items[index]; /* Get the item at that index. */
     LinkedList* head = table->overflow_buckets[index]; /* Get the linked list at that index. */
 
     if (item == NULL)
@@ -32,7 +35,7 @@ void ht_delete(hashtable* table, char* key)
             {
                 /* If the item matches the key, remove this item and update the linked list.*/
                 free_item(item); /* Clean up the item. */
-                LinkedList* node = head; /* Get the first node in the linked list. */
+                node = head; /* Get the first node in the linked list. */
                 head = head->next; /* Move to the next node. */
                 node->next = NULL; /* Disconnect the node from the list. */
                 table->items[index] = create_item(node->item->key, node->item->value); /* Create a new item with the same key and value. */
@@ -41,8 +44,8 @@ void ht_delete(hashtable* table, char* key)
                 return;
             }
 
-            LinkedList* curr = head; /* Start from the beginning of the linked list. */
-            LinkedList* prev = NULL; /* Keep track of the previous node. */
+            curr = head; /* Start from the beginning of the linked list. */
+            prev = NULL; /* Keep track of the previous node. */
 
             while (curr)
             {

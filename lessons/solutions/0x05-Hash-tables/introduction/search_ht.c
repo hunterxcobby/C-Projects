@@ -31,3 +31,24 @@ char* ht_search(hashtable* table, char* key)
     /* If we didn't find what we were looking for, we return NULL. */
     return NULL;
 }
+
+
+/* This function prints information about a 'key' in a HashTable. */
+
+void print_search(hashtable* table, char* key)
+{
+    char* val; /* A place to store the value associated with the key. */
+
+    /* Try to find the value associated with the key in the HashTable. */
+    if ((val = ht_search(table, key)) == NULL)
+    {
+        /* If the key is not found, print a message saying so. */
+        printf("Key:%s does not exist\n", key);
+        return; /* Return back, we're done here. */
+    }
+    else 
+    {
+        /* If the key is found, print both the key and its associated value. */
+        printf("Key:%s, Value:%s\n", key, val);
+    }
+}

@@ -12,6 +12,12 @@ typedef struct ht_item
     char *value;
 }ht_item;
 
+/* Defines the LinkedList. */
+typedef struct LinkedList 
+{
+    ht_item *item; /* Pointer to an item in the HashTable. */
+    struct LinkedList *next; /* Pointer to the next node in the linked list. */
+} LinkedList;
 
 /* Define the hash table*/
 typedef struct hashtable
@@ -25,12 +31,6 @@ typedef struct hashtable
 
 }hashtable;
 
-/* Defines the LinkedList. */
-typedef struct LinkedList 
-{
-    ht_item *item; /* Pointer to an item in the HashTable. */
-    struct LinkedList *next; /* Pointer to the next node in the linked list. */
-} LinkedList;
 
 
 /* The function prototypes*/

@@ -24,6 +24,14 @@ typedef struct hashtable
 
 }hashtable;
 
+/* Defines the LinkedList. */
+typedef struct LinkedList 
+{
+    ht_item* item; /* Pointer to an item in the HashTable. */
+    struct LinkedList* next; /* Pointer to the next node in the linked list. */
+} LinkedList;
+
+
 ht_item* create_item(char* key, char* value);
 hashtable* create_table(int size);
 

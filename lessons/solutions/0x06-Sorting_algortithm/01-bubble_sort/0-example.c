@@ -1,5 +1,14 @@
 #include <stdio.h>
 
+/**
+ * This is an implementation of an optimized bubble sort algorithm
+ * Please make sure to read the readme if you did not to grasps a solid
+ * understanding of this algorithm and how it works
+ * 
+ * Read the comments below for a summary of this code 
+ * I have added comments to make it simple for you to follow along 
+ * if you do not understand anything kindly let me know
+*/
 
 int main(void)
 {
@@ -55,3 +64,11 @@ int main(void)
 	/* Return 0 to indicate successful execution */
 	return (0);
 }
+
+
+/**
+ * the code uses the Bubble Sort algorithm to sort an array of integers in ascending order and then prints the sorted array. 
+ * The Bubble Sort algorithm works by repeatedly swapping adjacent elements if they are in the wrong order until the array is sorted. 
+ * The flag is used to optimize the algorithm by breaking out of the loop if no swaps are made in a pass, indicating that 
+ * the array is already sorted. The sorted array is then printed to the console.
+*/

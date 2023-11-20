@@ -4,6 +4,7 @@
  * This is an implementation of an insertion sort algorithm
  * Please make sure to read the readme if you did not to grasps a solid
  * understanding of this algorithm and how it works
+ * I have also implemeted other sort algorithms which you can checkout
  * 
  * Read the comments below for a summary of this code 
  * I have added comments to make it simple for you to follow along 

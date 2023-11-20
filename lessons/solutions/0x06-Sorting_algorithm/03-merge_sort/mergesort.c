@@ -7,7 +7,7 @@
  * below this function is a summary of what the function is doing
 */
 
-void mergesort(int *array, int leftHalf, int rightHalf)
+void mergeSort(int *array, int leftHalf, int rightHalf)
 {
     int mid; /* Declare a variable to store the middle index of the array */
 
@@ -18,10 +18,10 @@ void mergesort(int *array, int leftHalf, int rightHalf)
         mid = (leftHalf + rightHalf) / 2;
 
         /* Recursively call mergesort on the left half of the array */
-        mergesort(array, leftHalf, mid);
+        mergeSort(array, leftHalf, mid);
 
         /* Recursively call mergesort on the right half of the array */
-        mergesort(array, mid + 1, rightHalf);
+        mergeSort(array, mid + 1, rightHalf);
 
         /* Call the merge function to merge the sorted halves */
         merge(array, leftHalf, mid, rightHalf);

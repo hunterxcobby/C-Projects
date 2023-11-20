@@ -1,15 +1,14 @@
 #include "main.h"
 
 /* Function to merge two halves of an array during the merge sort process */
-int merge(int *array, int leftHalf, int mid, int rightHalf)
+void merge(int *array, int leftHalf, int mid, int rightHalf)
 {
     int i, j, k; /* Declare variables for indices in the merging process */
-    int *temp;/* Declare an array to temporarily store merged values */
+    int *temp = malloc((rightHalf - leftHalf + 1) * sizeof(int));
+/* Declare an array to temporarily store merged values */
     
-    temp[rightHalf - leftHalf + 1]; /* Use dynamic allocation */
-
     i = leftHalf; /* Initialize index i to the start of the left half */
-    j = mid + 1; /* Initialize index j to the start of the right half */
+    j = mid + i; /* Initialize index j to the start of the right half */
     k = 0; /* Initialize index k to the start of the merged array */
 
     /* Iterate while both halves have elements */
@@ -56,6 +55,8 @@ int merge(int *array, int leftHalf, int mid, int rightHalf)
     {
         array[k] = temp[k];
     }
+
+    free(temp);
 }
 
 /**

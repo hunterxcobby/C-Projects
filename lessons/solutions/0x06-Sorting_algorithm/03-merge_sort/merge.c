@@ -4,11 +4,13 @@
 int merge(int *array, int leftHalf, int mid, int rightHalf)
 {
     int i, j, k; /* Declare variables for indices in the merging process */
-    int *temp = NULL; /* Declare an array to temporarily store merged values */
+    int *temp;/* Declare an array to temporarily store merged values */
     
+    temp[rightHalf - leftHalf + 1]; /* Use dynamic allocation */
+
     i = leftHalf; /* Initialize index i to the start of the left half */
-    j = mid + i; /* Initialize index j to the start of the right half */
-    k = leftHalf; /* Initialize index k to the start of the merged array */
+    j = mid + 1; /* Initialize index j to the start of the right half */
+    k = 0; /* Initialize index k to the start of the merged array */
 
     /* Iterate while both halves have elements */
     while (i <= mid && j <= rightHalf)
@@ -55,3 +57,9 @@ int merge(int *array, int leftHalf, int mid, int rightHalf)
         array[k] = temp[k];
     }
 }
+
+/**
+ * this function takes two sorted halves of an array and merges them into a single sorted array. 
+ * It's a key step in the merge sort algorithm, which is a way to efficiently sort an array. 
+ * The temporary array (temp) is used to hold the merged elements temporarily.
+*/

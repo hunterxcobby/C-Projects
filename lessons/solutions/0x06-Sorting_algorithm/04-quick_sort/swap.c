@@ -1,3 +1,5 @@
+#include "main.h"
+
 void swap(int *a, int *b)
 {
     int temp = *a;

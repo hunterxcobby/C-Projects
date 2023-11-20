@@ -3,7 +3,7 @@
 int main(void)
 {
     int i;
-    int arr[] = {12, 11, 13, 5, 6, 7};
+    int arr[] = {15, 5, 24, 8, 1, 3, 16, 10, 20};
     int arr_size = sizeof(arr) / sizeof(arr[0]);
 
     printf("Original Array: ");

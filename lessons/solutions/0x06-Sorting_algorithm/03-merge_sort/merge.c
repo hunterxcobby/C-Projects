@@ -8,14 +8,14 @@ void merge(int *array, int leftHalf, int mid, int rightHalf)
 /* Declare an array to temporarily store merged values */
     
     i = leftHalf; /* Initialize index i to the start of the left half */
-    j = mid + i; /* Initialize index j to the start of the right half */
+    j = mid + 1; /* Initialize index j to the start of the right half */
     k = 0; /* Initialize index k to the start of the merged array */
 
     /* Iterate while both halves have elements */
     while (i <= mid && j <= rightHalf)
     {
         /* Compare elements at indices i and j */
-        if (array[i] <= array[j])
+        if (array[i] < array[j])
         {
             /* If equal or less, assign the element at index i to the temp array */
             temp[k] = array[i];
@@ -51,9 +51,9 @@ void merge(int *array, int leftHalf, int mid, int rightHalf)
     }
 
     /* Copy the merged values from the temp array back to the original array */
-    for (k = leftHalf; k <= rightHalf; k++)
+    for (k = 0; k < (rightHalf - leftHalf + 1); k++) 
     {
-        array[k] = temp[k];
+        array[leftHalf + k] = temp[k];
     }
 
     free(temp);

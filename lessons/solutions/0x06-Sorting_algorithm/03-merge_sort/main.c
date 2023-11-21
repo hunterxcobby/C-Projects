@@ -1,5 +1,8 @@
 #include "main.h"
 
+#define LEFT_START 0
+#define RIGHT_END (arr_size - 1)
+
 int main(void)
 {
     int i;
@@ -11,7 +14,7 @@ int main(void)
         printf("%d ", arr[i]);
     printf("\n");
 
-    mergeSort(arr, 0, arr_size - 1);
+    mergeSort(arr,LEFT_START, RIGHT_END);
 
     printf("Sorted Array: ");
     for (i = 0; i < arr_size; i++)
@@ -20,5 +23,6 @@ int main(void)
     }
     printf("\n");
 
+    free(arr);
     return 0;
 }

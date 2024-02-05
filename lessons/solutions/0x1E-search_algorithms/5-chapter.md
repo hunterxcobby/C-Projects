@@ -1,0 +1,7 @@
+In the function `addSequence`, there is a loop that iterates `n` times, and within each iteration, it calls the function `pairSum`. However, unlike the previous recursive example, the calls to `pairSum` in this function do not stack up on top of each other. Instead, each call to `pairSum` is made independently within each iteration of the loop.
+
+This means that even though there are roughly O(n) calls to `pairSum`, these calls do not exist simultaneously on the call stack. Instead, each call to `pairSum` is completed before the next one begins, and the memory used for each call is released after its execution.
+
+Therefore, in this scenario, the space complexity is O(1) rather than O(n) because the memory usage remains constant regardless of the size of the input. This is because the space required by the algorithm does not grow proportionally with the input size; it remains constant regardless of the value of `n`.
+
+It's important to note that space complexity can indeed vary depending on factors such as the programming language, compiler optimizations, and the specific implementation of the algorithm. Therefore, when analyzing space complexity, it's essential to consider these factors and understand how they affect memory usage in different contexts.

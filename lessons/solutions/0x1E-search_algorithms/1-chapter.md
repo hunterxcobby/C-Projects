@@ -1,0 +1,3 @@
+let's break down "Space Complexity" using the Feynman learning technique!
+
+Imagine you're moving into a new apartment. The space complexity is like figuring out how much room you need for all your stuff, including furniture (which is like auxiliary space) and the space you need for yourself to live comfortably (which is like the space used by the input). So, space complexity tells you how much overall space your algorithm needs based on the size of the input it's dealing with. If you have a lot of stuff (a big input), you'll need more space, and that's what space complexity helps you understand.
